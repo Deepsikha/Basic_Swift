@@ -21,7 +21,9 @@ class ThirdViewController: UIViewController {
     }
     @IBAction func reverse_to_home(_ sender: UIButton) {
         
-        self.navigationController?.popToViewController((self.navigationController?.viewControllers[1])!, animated: true)
+//        self.navigationController?.popToViewController((self.navigationController?.viewControllers[1])!, animated: true)
+        
+        self.navigationController?.popToRootViewController(animated: true)
         
     }
     override func didReceiveMemoryWarning() {

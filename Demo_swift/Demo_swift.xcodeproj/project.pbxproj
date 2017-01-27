@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D2EFCF01E3B23D1005F5BC0 /* blank-clock-face-hour-minute-second-hands-isolated-white-background-just-set-your-own-time-38762402.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7D2EFCEF1E3B23D1005F5BC0 /* blank-clock-face-hour-minute-second-hands-isolated-white-background-just-set-your-own-time-38762402.jpg */; };
 		7D4AE04D1E38ABCC00F1DED1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4AE04C1E38ABCC00F1DED1 /* AppDelegate.swift */; };
 		7D4AE0521E38ABCC00F1DED1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D4AE0501E38ABCC00F1DED1 /* Main.storyboard */; };
 		7D4AE0541E38ABCC00F1DED1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D4AE0531E38ABCC00F1DED1 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D2EFCEF1E3B23D1005F5BC0 /* blank-clock-face-hour-minute-second-hands-isolated-white-background-just-set-your-own-time-38762402.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "blank-clock-face-hour-minute-second-hands-isolated-white-background-just-set-your-own-time-38762402.jpg"; sourceTree = "<group>"; };
 		7D4AE0491E38ABCC00F1DED1 /* Demo_swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo_swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D4AE04C1E38ABCC00F1DED1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D4AE0511E38ABCC00F1DED1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -84,6 +86,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D2EFCED1E3B23D1005F5BC0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7D2EFCEE1E3B23D1005F5BC0 /* Images */,
+			);
+			name = Resources;
+			path = xib/Resources;
+			sourceTree = "<group>";
+		};
+		7D2EFCEE1E3B23D1005F5BC0 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				7D2EFCEF1E3B23D1005F5BC0 /* blank-clock-face-hour-minute-second-hands-isolated-white-background-just-set-your-own-time-38762402.jpg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		7D4AE0401E38ABCB00F1DED1 = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				7D4AE04C1E38ABCC00F1DED1 /* AppDelegate.swift */,
+				7D2EFCED1E3B23D1005F5BC0 /* Resources */,
 				7D4AE0861E38BCF900F1DED1 /* ViewController */,
 				7D4AE08A1E38BCF900F1DED1 /* xib */,
 				7D4AE0501E38ABCC00F1DED1 /* Main.storyboard */,
@@ -265,6 +285,7 @@
 			files = (
 				7D4AE0571E38ABCC00F1DED1 /* LaunchScreen.storyboard in Resources */,
 				7D4AE0911E38BCF900F1DED1 /* View.xib in Resources */,
+				7D2EFCF01E3B23D1005F5BC0 /* blank-clock-face-hour-minute-second-hands-isolated-white-background-just-set-your-own-time-38762402.jpg in Resources */,
 				7D4AE0541E38ABCC00F1DED1 /* Assets.xcassets in Resources */,
 				7D4AE0901E38BCF900F1DED1 /* secondView.xib in Resources */,
 				7D4AE0971E38C7A700F1DED1 /* thirdView.xib in Resources */,
@@ -541,6 +562,7 @@
 				7D4AE0731E38ABCC00F1DED1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7D4AE0741E38ABCC00F1DED1 /* Build configuration list for PBXNativeTarget "Demo_swiftTests" */ = {
 			isa = XCConfigurationList;
@@ -549,6 +571,7 @@
 				7D4AE0761E38ABCC00F1DED1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7D4AE0771E38ABCC00F1DED1 /* Build configuration list for PBXNativeTarget "Demo_swiftUITests" */ = {
 			isa = XCConfigurationList;
@@ -557,6 +580,7 @@
 				7D4AE0791E38ABCC00F1DED1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
