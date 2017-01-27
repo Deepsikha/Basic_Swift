@@ -78,6 +78,10 @@
                         <outletCollection property="gestureRecognizers" destination="81x-wn-WV4" appends="YES" id="8aD-h7-hcW"/>
                     </connections>
                 </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xuk-6T-g9Q">
+                    <rect key="frame" x="36" y="500" width="200" height="110"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </stackView>
             </subviews>
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
             <gestureRecognizers/>
