@@ -31,7 +31,7 @@ class SignUPViewController: UIViewController {
     }
     
     @IBAction func signUPAction(_ sender: UIButton) {
-        if self.firstname.text!.isEmpty && self.lastname.text!.isEmpty && self.username.text!.isEmpty && self.pwd.text!.isEmpty && self.pwd1.text!.isEmpty {
+        if self.firstname.text!.isEmpty || self.lastname.text!.isEmpty || self.username.text!.isEmpty || self.pwd.text!.isEmpty || self.pwd1.text!.isEmpty {
             let alt = UIAlertController(title: "Enter Value", message: "All Fields are Mandatory", preferredStyle: UIAlertControllerStyle.alert)
             alt.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default,handler: nil))
             self.present(alt, animated: true, completion: nil)

@@ -39,6 +39,11 @@ class ViewController: UIViewController {
     @IBAction func ForwardAction(_ sender: UIButton) {
         print("Button tapped \u{1f44d}")
         let pw = pwd.text
+        if (self.pwd.text?.isEmpty)! || (self.email.text?.isEmpty)! {
+            let alt = UIAlertController(title: "Enter Value", message: "", preferredStyle: UIAlertControllerStyle.alert)
+            alt.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+            self.present(alt, animated: true, completion: nil)
+        }
 //        // 1. Instantiate SecondViewController
 //        let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
 //        // 2. Set self as a value to delegate
