@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var valueSentFromSignUPPAge:String?
     
     @IBOutlet var Forward: UIButton!
     @IBOutlet var label: UILabel!
@@ -24,16 +25,42 @@ class ViewController: UIViewController {
 //        Forward.frame = CGRectMake(100, 100, 50, 50)
         //MyTableView.frame = CGRectMake(20, 50, 250, 400)
     }
-
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        
+//        // 3. Before displaying the value check if it contains data
+//        let valueToDisplay = valueSentFromSecondViewController
+//        if  {
+//            
+//        }
+//    }
+    
+    
     @IBAction func ForwardAction(_ sender: UIButton) {
         print("Button tapped \u{1f44d}")
         let pw = pwd.text
+//        // 1. Instantiate SecondViewController
+//        let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
+//        // 2. Set self as a value to delegate
+//        secondViewController.delegate = self
+//        
+//        // 3. Push SecondViewController
+//        self.navigationController?.pushViewController(secondViewController, animated: true)
         if pw == "makein" {
         let vc = SecondViewController(nibName:"secondView", bundle: nil)
-        self.navigationController?.pushViewController(vc, animated: false)
+        self.navigationController?.pushViewController(vc, animated: true)
         }else{
             let alt = UIAlertController(title: "", message: "Wrong Password", preferredStyle: UIAlertControllerStyle.alert)
+            alt.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+            self.present(alt, animated: true, completion: nil)
         }
+        
+    }
+    
+ 
+    @IBAction func signUPAction(_ sender: UIButton) {
+        let vc = SignUPViewController(nibName: "SignUPView", bundle: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
