@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D23BEEA1E3C6963009FDDAD /* fourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D23BEE91E3C6963009FDDAD /* fourthViewController.swift */; };
+		7D23BEEC1E3C6AF7009FDDAD /* fourthView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D23BEEB1E3C6AF7009FDDAD /* fourthView.xib */; };
 		7D2EFCF01E3B23D1005F5BC0 /* blank-clock-face-hour-minute-second-hands-isolated-white-background-just-set-your-own-time-38762402.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7D2EFCEF1E3B23D1005F5BC0 /* blank-clock-face-hour-minute-second-hands-isolated-white-background-just-set-your-own-time-38762402.jpg */; };
 		7D2EFCF21E3B2F70005F5BC0 /* RatingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2EFCF11E3B2F70005F5BC0 /* RatingController.swift */; };
 		7D2EFCF41E3B4DBA005F5BC0 /* RC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2EFCF31E3B4DBA005F5BC0 /* RC.swift */; };
@@ -43,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D23BEE91E3C6963009FDDAD /* fourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fourthViewController.swift; sourceTree = "<group>"; };
+		7D23BEEB1E3C6AF7009FDDAD /* fourthView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = fourthView.xib; sourceTree = "<group>"; };
 		7D2EFCEF1E3B23D1005F5BC0 /* blank-clock-face-hour-minute-second-hands-isolated-white-background-just-set-your-own-time-38762402.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "blank-clock-face-hour-minute-second-hands-isolated-white-background-just-set-your-own-time-38762402.jpg"; sourceTree = "<group>"; };
 		7D2EFCF11E3B2F70005F5BC0 /* RatingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingController.swift; sourceTree = "<group>"; };
 		7D2EFCF31E3B4DBA005F5BC0 /* RC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RC.swift; path = ../RC.swift; sourceTree = "<group>"; };
@@ -167,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				7D4AE0891E38BCF900F1DED1 /* ViewController.swift */,
+				7D23BEE91E3C6963009FDDAD /* fourthViewController.swift */,
 				7D4AE0981E38C7C700F1DED1 /* ThirdViewController.swift */,
 				7D4AE0871E38BCF900F1DED1 /* SecondViewController.swift */,
 			);
@@ -177,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				7D4AE08B1E38BCF900F1DED1 /* secondView.xib */,
+				7D23BEEB1E3C6AF7009FDDAD /* fourthView.xib */,
 				7D4AE08C1E38BCF900F1DED1 /* View.xib */,
 				7D4AE0961E38C7A700F1DED1 /* thirdView.xib */,
 				7D2EFCED1E3B23D1005F5BC0 /* Resources */,
@@ -293,6 +299,7 @@
 			files = (
 				7D4AE0571E38ABCC00F1DED1 /* LaunchScreen.storyboard in Resources */,
 				7D4AE0911E38BCF900F1DED1 /* View.xib in Resources */,
+				7D23BEEC1E3C6AF7009FDDAD /* fourthView.xib in Resources */,
 				7D2EFCF01E3B23D1005F5BC0 /* blank-clock-face-hour-minute-second-hands-isolated-white-background-just-set-your-own-time-38762402.jpg in Resources */,
 				7D4AE0541E38ABCC00F1DED1 /* Assets.xcassets in Resources */,
 				7D4AE0901E38BCF900F1DED1 /* secondView.xib in Resources */,
@@ -326,6 +333,7 @@
 				7D2EFCFA1E3B68DD005F5BC0 /* demo_rt.swift in Sources */,
 				7D2EFCF21E3B2F70005F5BC0 /* RatingController.swift in Sources */,
 				7D2EFCF41E3B4DBA005F5BC0 /* RC.swift in Sources */,
+				7D23BEEA1E3C6963009FDDAD /* fourthViewController.swift in Sources */,
 				7D4AE08F1E38BCF900F1DED1 /* ViewController.swift in Sources */,
 				7D4AE0991E38C7C700F1DED1 /* ThirdViewController.swift in Sources */,
 				7D4AE04D1E38ABCC00F1DED1 /* AppDelegate.swift in Sources */,
