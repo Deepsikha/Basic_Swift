@@ -11,6 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SecondViewController" customModule="Demo_swift" customModuleProvider="target">
             <connections>
+                <outlet property="mealNameLabel" destination="AXO-38-azS" id="k8U-4C-MYl"/>
+                <outlet property="nameTEextField" destination="Nhk-HO-fdT" id="Gag-PH-Y2e"/>
+                <outlet property="photoImageView" destination="IgJ-zR-aqA" id="5Qx-PE-biC"/>
                 <outlet property="view" destination="iN0-l3-epB" id="HRL-ti-vYg"/>
             </connections>
         </placeholder>
@@ -19,25 +22,88 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmz-dJ-IwA">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmz-dJ-IwA">
                     <rect key="frame" x="313" y="49" width="46" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="lnB-BM-5Tb"/>
+                    </constraints>
                     <state key="normal" title="Next"/>
                     <connections>
                         <action selector="forwardAction:" destination="-1" eventType="touchUpInside" id="d78-zg-hQg"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8uI-cH-rBr">
-                    <rect key="frame" x="16" y="49" width="73" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8uI-cH-rBr">
+                    <rect key="frame" x="36" y="49" width="59" height="30"/>
                     <state key="normal" title="Previous"/>
                     <connections>
                         <action selector="reverseAction:" destination="-1" eventType="touchUpInside" id="rrA-Vi-4Ch"/>
                     </connections>
                 </button>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="nop-Qq-J2C">
+                    <rect key="frame" x="36" y="104" width="303" height="80.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AXO-38-azS">
+                            <rect key="frame" x="0.0" y="0.0" width="91" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Value" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nhk-HO-fdT">
+                            <rect key="frame" x="0.0" y="20.5" width="303" height="30"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1rf-BA-ENl">
+                            <rect key="frame" x="0.0" y="50.5" width="143" height="30"/>
+                            <state key="normal" title="Set Default text label"/>
+                            <connections>
+                                <action selector="setCustomLabelName:" destination="-1" eventType="touchUpInside" id="Mue-mh-LAZ"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Nhk-HO-fdT" firstAttribute="top" secondItem="AXO-38-azS" secondAttribute="bottom" id="Cs5-1t-S8C"/>
+                        <constraint firstAttribute="trailing" secondItem="Nhk-HO-fdT" secondAttribute="trailing" id="LsV-k3-DBd"/>
+                        <constraint firstItem="Nhk-HO-fdT" firstAttribute="top" secondItem="AXO-38-azS" secondAttribute="bottom" id="PQB-hh-RTv"/>
+                        <constraint firstItem="Nhk-HO-fdT" firstAttribute="top" secondItem="AXO-38-azS" secondAttribute="bottom" id="kV3-Tf-HgY"/>
+                        <constraint firstItem="1rf-BA-ENl" firstAttribute="top" secondItem="Nhk-HO-fdT" secondAttribute="bottom" id="nx8-aJ-yPA"/>
+                    </constraints>
+                </stackView>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="IgJ-zR-aqA">
+                    <rect key="frame" x="36" y="205" width="240" height="246"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="81x-wn-WV4" appends="YES" id="8aD-h7-hcW"/>
+                    </connections>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xuk-6T-g9Q">
+                    <rect key="frame" x="36" y="500" width="200" height="110"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </stackView>
             </subviews>
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="cmz-dJ-IwA" secondAttribute="trailing" constant="16" id="3j9-0B-mQZ"/>
+                <constraint firstItem="nop-Qq-J2C" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="36" id="Atf-gA-ljr"/>
+                <constraint firstItem="nop-Qq-J2C" firstAttribute="top" secondItem="8uI-cH-rBr" secondAttribute="bottom" constant="25" id="EmA-Pn-C7H"/>
+                <constraint firstItem="cmz-dJ-IwA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="49" id="Eyb-Ce-rWb"/>
+                <constraint firstItem="8uI-cH-rBr" firstAttribute="leading" secondItem="nop-Qq-J2C" secondAttribute="leading" id="bbE-xE-rBE"/>
+                <constraint firstAttribute="trailing" secondItem="nop-Qq-J2C" secondAttribute="trailing" constant="36" id="jGX-3f-NXL"/>
+                <constraint firstItem="cmz-dJ-IwA" firstAttribute="baseline" secondItem="8uI-cH-rBr" secondAttribute="baseline" id="snk-vm-dKO"/>
+            </constraints>
             <point key="canvasLocation" x="33.5" y="91.5"/>
         </view>
+        <tapGestureRecognizer id="81x-wn-WV4">
+            <connections>
+                <action selector="selectImageFromPhotoLibrary:" destination="-1" id="nDs-s1-iA8"/>
+                <outlet property="delegate" destination="IgJ-zR-aqA" id="ndq-5J-pdN"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
+    <resources>
+        <image name="Image" width="494" height="468"/>
+    </resources>
 </document>
