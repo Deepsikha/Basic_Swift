@@ -8,13 +8,9 @@
 
 import UIKit
 
-
-
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
   
-    
     var window: UIWindow?
     var navController: UINavigationController?
     var viewController: ViewController?
@@ -28,8 +24,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window!.rootViewController = navController
         self.window!.backgroundColor = UIColor.white
-        
-        
         
         return true
     }
@@ -55,7 +49,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
 }
 

@@ -10,7 +10,6 @@ import UIKit
 
 class SecondViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    
     @IBOutlet var nameTEextField: UITextField!
     
     @IBOutlet var mealNameLabel: UILabel!

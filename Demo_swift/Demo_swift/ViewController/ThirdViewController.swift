@@ -23,16 +23,19 @@ class ThirdViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBAction func reverseAction(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
+    
     @IBAction func forwardAction(_ sender: UIButton) {
         let vc = fourthViewController(nibName: "fourthView", bundle: nil)
         
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
     @IBAction func reverse_to_home(_ sender: UIButton) {
 //        self.navigationController?.popToViewController((self.navigationController?.viewControllers[1])!, animated: true)
         self.navigationController?.popToRootViewController(animated: true)
         
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

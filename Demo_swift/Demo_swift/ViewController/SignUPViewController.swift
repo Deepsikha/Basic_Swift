@@ -11,6 +11,7 @@ import UIKit
 protocol MyProtocol {
     func passvalue(valueSent:String?)
 }
+
 class SignUPViewController: UIViewController {
 
     @IBOutlet var firstname: UITextField!

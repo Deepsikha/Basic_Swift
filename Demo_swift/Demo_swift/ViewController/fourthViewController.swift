@@ -36,7 +36,6 @@ class fourthViewController: UIViewController, UITableViewDelegate, UITableViewDa
         table1.register(UINib(nibName: "ListCell", bundle: nil), forCellReuseIdentifier: cellReuseIdentifier)
     }
     
-    
     @IBAction func addData(_ sender: UIButton) {
         //add your data into tables array from textField
         table1Data.append(table1Text.text!)
@@ -51,16 +50,16 @@ class fourthViewController: UIViewController, UITableViewDelegate, UITableViewDa
 //            self.table1.reloadData()
 //            self.table2.reloadData()
 //        })
-        
-        
         table1Text.resignFirstResponder()
         table2Text.resignFirstResponder()
+        
     }
     
     //delegate methods
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return self.animals.count
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView == table1 {
             return table1Data.count
@@ -87,6 +86,7 @@ class fourthViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBAction func reverse(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
+    
 }
 
     /*
