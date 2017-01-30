@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var valueSentFromSignUPPAge:String?
+    var valueSentFromSignUPPage:String?
     
     @IBOutlet var Forward: UIButton!
     @IBOutlet var label: UILabel!
@@ -25,15 +25,12 @@ class ViewController: UIViewController {
 //        Forward.frame = CGRectMake(100, 100, 50, 50)
         //MyTableView.frame = CGRectMake(20, 50, 250, 400)
     }
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        
-//        // 3. Before displaying the value check if it contains data
-//        let valueToDisplay = valueSentFromSecondViewController
-//        if  {
-//            
-//        }
-//    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //self.navigationController?.navigationBar.isHidden = false
+        // 3. Before displaying the value check if it contains data
+        print("nthg")
+    }
     
     
     @IBAction func ForwardAction(_ sender: UIButton) {

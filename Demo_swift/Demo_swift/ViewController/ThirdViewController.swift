@@ -11,6 +11,9 @@ import UIKit
 class ThirdViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet var tableViewController: UITableView!
+    @IBOutlet var textData: UITextField!
+    
+    var tableData = ["a"]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,16 +39,42 @@ class ThirdViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 15
+        return tableData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
-        cell.textLabel?.text = " "
+//        let cell = tableViewController.dequeueReusableCell(withIdentifier: "cell", for: indexPath as IndexPath)
+        
+        let row = indexPath.row
+        cell.textLabel?.text = tableData[row]
         tableView.separatorStyle = UITableViewCellSeparatorStyle.singleLine
         return cell
     }
     
+    @IBAction func addData(_ sender: UIButton) {
+        tableData.append(textData.text!)
+        //textData.resignFirstResponder()
+        tableViewController.reloadData()
+    }
+    
+//    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+//        let row = indexPath.row
+//        tableData.remove(at: row)
+//        textData.resignFirstResponder()
+//        tableViewController.reloadData()
+//        return true
+//    }
+//    
+//    
+//    
+//    @IBAction func updateData(_ sender: UIButton) {
+//        tableData.append(textData.text!)
+//        textData.resignFirstResponder()
+//        tableViewController.reloadData()
+//
+//    }
+
     
     
     

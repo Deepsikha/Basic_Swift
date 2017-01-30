@@ -19,9 +19,20 @@ class fourthViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var table1Data = ["a"]
     var table2Data = ["1"]
     
+    // These strings will be the data for the table view cells
+    let animals: [String] = ["Horse", "Cow", "Camel", "Sheep", "Goat"]
+    
+    // These are the colors of the square views in our table view cells.
+    // In a real project you might use UIImages.
+    let colors = [UIColor.blue, UIColor.yellow, UIColor.magenta, UIColor.red, UIColor.brown]
+    
+    // Don't forget to enter this in IB also
+    let cellReuseIdentifier = "cell"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        table1.delegate = self
+        table1.dataSource = self
     }
     
     
@@ -30,11 +41,15 @@ class fourthViewController: UIViewController, UITableViewDelegate, UITableViewDa
         table1Data.append(table1Text.text!)
         table2Data.append(table2Text.text!)
         
-        DispatchQueue.main.async(execute: { () -> Void in
-            //reload your tableView
-            self.table1.reloadData()
-            self.table2.reloadData()
-        })
+//        dispath_async(dispatch_get_main_queue(), { () -> Void in
+//            self.table1.reloadData()
+//            self.table2.reloadData()
+//        })
+//        DispatchQueue.main.async(execute: { () -> Void in
+//            //reload your tableView
+//            self.table1.reloadData()
+//            self.table2.reloadData()
+//        })
         
         
         table1Text.resignFirstResponder()
@@ -43,7 +58,7 @@ class fourthViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     //delegate methods
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        return self.animals.count
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView == table1 {
@@ -51,34 +66,25 @@ class fourthViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }else if tableView == table2 {
             return table2Data.count
         }
-        return Int()
+        return self.animals.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if tableView == table1 {
-            let cell = table1.dequeueReusableCell(withIdentifier: "Cell", for: indexPath as IndexPath) as! UITableViewCell
-            
-            let row = indexPath.row
-            cell.textLabel?.text = table1Data[row]
-            
-            return cell
-        }else if tableView == table2 {
-            
-            let cell = table2.dequeueReusableCell(withIdentifier: "Cell1", for: indexPath as IndexPath) as! UITableViewCell
-            
-            let row = indexPath.row
-            cell.textLabel?.text = table2Data[row]
-            
-            return cell
-        }
+        let cell = self.table1.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as! ListCell
         
-        return UITableViewCell()
+        cell.backgroundColor = self.colors[indexPath.row]
+        cell.lblname.text = self.animals[indexPath.row]
+        
+        return cell
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    @IBAction func reverse(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
     }
 }
 

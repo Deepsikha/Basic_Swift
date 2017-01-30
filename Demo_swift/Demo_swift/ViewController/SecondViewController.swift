@@ -37,7 +37,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         mealNameLabel.text =  textField.text! + "\(string)"
-        if textField.text?.characters.count == 1 && string == ""
+        if textField.text?.characters.count == 0 && string == ""
         {
             mealNameLabel.text = ""
         }
