@@ -27,12 +27,13 @@ class fourthViewController: UIViewController, UITableViewDelegate, UITableViewDa
     let colors = [UIColor.blue, UIColor.yellow, UIColor.magenta, UIColor.red, UIColor.brown]
     
     // Don't forget to enter this in IB also
-    let cellReuseIdentifier = "cell"
+    let cellReuseIdentifier = "MyCell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         table1.delegate = self
         table1.dataSource = self
+        table1.register(UINib(nibName: "ListCell", bundle: nil), forCellReuseIdentifier: cellReuseIdentifier)
     }
     
     
