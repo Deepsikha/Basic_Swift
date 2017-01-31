@@ -10,10 +10,12 @@ import UIKit
 
 class TableHeaderFooterViewController: UITableViewController {
     
-    var textdata = [ "Aasa" , "Basa "]
+    var textdata = [ "D", "A" , "B", "c"]
     var text : [String] = []
     var text1 : [String] = []
     var flag: Int = 0
+    var i:Int = 0
+    var count: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,9 +25,11 @@ class TableHeaderFooterViewController: UITableViewController {
         var text = textdata.sorted (by: {$0 < $1})
         for strEtxt in text{
             
-            if text[0] == text[0]{
-                flag += 1
+            if strEtxt.characters.first == text[i].characters.first{
+                count += 1
+                i += 1
             }else{
+                flag += 1
             }
         }// Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -43,19 +47,19 @@ class TableHeaderFooterViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return (flag-1)
+        return (flag)
     }
    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.textdata.count
+        return self.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
         
-        cell.textLabel?.text = textdata[0]
+        cell.textLabel?.text = text[0]
         return cell
     }
     
@@ -86,9 +90,7 @@ class TableHeaderFooterViewController: UITableViewController {
             return "G"
         default:
             return "E"
-            
         }
-        return "Section \(section)"
     }
 
     /*
