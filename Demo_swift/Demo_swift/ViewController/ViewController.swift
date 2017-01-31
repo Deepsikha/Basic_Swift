@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UITextFieldDelegate {
     
     var valueSentFromSignUPPage:String?
     
@@ -62,6 +62,21 @@ class ViewController: UIViewController {
     @IBAction func signUPAction(_ sender: UIButton) {
         let vc = SignUPViewController(nibName: "SignUPView", bundle: nil)
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if (textField == email)
+        {
+            pwd.becomeFirstResponder()
+        }
+        if (textField == pwd)
+        {
+            
+        }
+        return true
+    }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        print("jugtjghkg")
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

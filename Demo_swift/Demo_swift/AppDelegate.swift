@@ -13,12 +13,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
     var window: UIWindow?
     var navController: UINavigationController?
-    var viewController: ViewController?
+    var viewController: TableHeaderFooterViewController?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         navController = UINavigationController()
-        viewController = ViewController()
+        viewController = TableHeaderFooterViewController()
         navController?.pushViewController(viewController!, animated: true)
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
