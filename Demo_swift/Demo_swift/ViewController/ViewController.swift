@@ -16,6 +16,7 @@ class ViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet var label: UILabel!
     @IBOutlet var email: UITextField!
     @IBOutlet var pwd: UITextField!
+    @IBOutlet var submit: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,13 +50,7 @@ class ViewController: UIViewController,UITextFieldDelegate {
             let alt = UIAlertController(title: "", message: "Wrong Password", preferredStyle: UIAlertControllerStyle.alert)
             alt.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
             self.present(alt, animated: true, completion: nil)
-            //        // 1. Instantiate SecondViewController
-            //        let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
-            //        // 2. Set self as a value to delegate
-            //        secondViewController.delegate = self
-            //
-            //        // 3. Push SecondViewController
-            //        self.navigationController?.pushViewController(secondViewController, animated: true)
+            
         }
     }
  
@@ -71,17 +66,16 @@ class ViewController: UIViewController,UITextFieldDelegate {
         }
         if (textField == pwd)
         {
-            
+            submit.becomeFirstResponder()
         }
         return true
     }
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
-        print("jugtjghkg")
+        print("Next one !!!")
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        
     }
-    
 }
 
