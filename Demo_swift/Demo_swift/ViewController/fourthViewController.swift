@@ -10,76 +10,64 @@ import UIKit
 
 class fourthViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    
-    @IBOutlet var table1Text: UITextField!
-    @IBOutlet var table2Text: UITextField!
-    
-    @IBOutlet var table1: UITableView!
-    @IBOutlet var table2: UITableView!
+   
     var table1Data = ["a"]
-    var table2Data = ["1"]
+    @IBOutlet var tableView1: UITableView!
+
+    // These strings will be the data for the table view cells
+    let animals: [String] = ["Horse", "Cow", "Camel", "Sheep", "Goat"]
+    
+    // These are the colors of the square views in our table view cells.
+    // In a real project you might use UIImages.
+    let colors = [UIColor.blue, UIColor.yellow, UIColor.magenta, UIColor.red, UIColor.brown]
+    
+    // Don't forget to enter this in IB also
+    let cellReuseIdentifier = "FourthScreenCell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tableView1.register(UINib(nibName: "FourthScreenCell", bundle: nil), forCellReuseIdentifier: cellReuseIdentifier)
     }
     
-    
-    @IBAction func addData(_ sender: UIButton) {
-        //add your data into tables array from textField
-        table1Data.append(table1Text.text!)
-        table2Data.append(table2Text.text!)
-        
-        DispatchQueue.main.async(execute: { () -> Void in
-            //reload your tableView
-            self.table1.reloadData()
-            self.table2.reloadData()
-        })
-        
-        
-        table1Text.resignFirstResponder()
-        table2Text.resignFirstResponder()
-    }
+
     
     //delegate methods
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
+   
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if tableView == table1 {
-            return table1Data.count
-        }else if tableView == table2 {
-            return table2Data.count
-        }
-        return Int()
+        return self.animals.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
+//
+        let cell:FourthScreenCell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath) as! FourthScreenCell
+//        let cell:ListCell = self.table1.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as! ListCell
+        cell.backgroundColor = self.colors[indexPath.row]
+        cell.lblCell.text = self.animals[indexPath.row]
         
-        if tableView == table1 {
-            let cell = table1.dequeueReusableCell(withIdentifier: "Cell", for: indexPath as IndexPath) as! UITableViewCell
-            
-            let row = indexPath.row
-            cell.textLabel?.text = table1Data[row]
-            
-            return cell
-        }else if tableView == table2 {
-            
-            let cell = table2.dequeueReusableCell(withIdentifier: "Cell1", for: indexPath as IndexPath) as! UITableViewCell
-            
-            let row = indexPath.row
-            cell.textLabel?.text = table2Data[row]
-            
-            return cell
-        }
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 18))
         
-        return UITableViewCell()
+        let label = UILabel(frame: CGRect(x: 20, y: 20, width: 50, height: 50))
+        label.text = "Users"
+        label.textColor = UIColor.white
+        self.view.addSubview(view)
+        return view
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    @IBAction func reverse(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 }
 
     /*

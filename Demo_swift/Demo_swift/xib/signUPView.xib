@@ -15,6 +15,7 @@
                 <outlet property="lastname" destination="ze4-Oh-2hT" id="rgU-yy-xgn"/>
                 <outlet property="pwd" destination="8r6-8D-wvb" id="o3s-Ac-by7"/>
                 <outlet property="pwd1" destination="Mrp-8s-mpo" id="nAZ-Gl-SCN"/>
+                <outlet property="su" destination="Mvf-UE-DW2" id="A9r-n3-tyO"/>
                 <outlet property="username" destination="fjg-vr-LRs" id="gdD-a3-M97"/>
                 <outlet property="view" destination="iN0-l3-epB" id="j3l-nO-pZY"/>
             </connections>

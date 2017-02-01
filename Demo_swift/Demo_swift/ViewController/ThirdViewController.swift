@@ -11,6 +11,9 @@ import UIKit
 class ThirdViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet var tableViewController: UITableView!
+    @IBOutlet var textData: UITextField!
+    
+    var tableData = ["a"]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,32 +23,61 @@ class ThirdViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBAction func reverseAction(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
+    
     @IBAction func forwardAction(_ sender: UIButton) {
         let vc = fourthViewController(nibName: "fourthView", bundle: nil)
         
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
     @IBAction func reverse_to_home(_ sender: UIButton) {
 //        self.navigationController?.popToViewController((self.navigationController?.viewControllers[1])!, animated: true)
         self.navigationController?.popToRootViewController(animated: true)
         
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 15
+        return tableData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
-        cell.textLabel?.text = " "
+//        let cell = tableViewController.dequeueReusableCell(withIdentifier: "cell", for: indexPath as IndexPath)
+        
+        let row = indexPath.row
+        cell.textLabel?.text = tableData[row]
         tableView.separatorStyle = UITableViewCellSeparatorStyle.singleLine
         return cell
     }
     
+    @IBAction func addData(_ sender: UIButton) {
+        tableData.append(textData.text!)
+        //textData.resignFirstResponder()
+        tableViewController.reloadData()
+    }
+    
+//    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+//        let row = indexPath.row
+//        tableData.remove(at: row)
+//        textData.resignFirstResponder()
+//        tableViewController.reloadData()
+//        return true
+//    }
+//    
+//    
+//    
+//    @IBAction func updateData(_ sender: UIButton) {
+//        tableData.append(textData.text!)
+//        textData.resignFirstResponder()
+//        tableViewController.reloadData()
+//
+//    }
+
     
     
     

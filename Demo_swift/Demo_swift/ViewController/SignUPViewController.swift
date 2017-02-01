@@ -9,8 +9,9 @@
 import UIKit
 
 protocol MyProtocol {
-    func passvalue(valueset:String?)
+    func passvalue(valueSent:String?)
 }
+
 class SignUPViewController: UIViewController {
 
     @IBOutlet var firstname: UITextField!
@@ -18,10 +19,14 @@ class SignUPViewController: UIViewController {
     @IBOutlet var username: UITextField!
     @IBOutlet var pwd: UITextField!
     @IBOutlet var pwd1: UITextField!
+    @IBOutlet var su: UILabel!
+    
     var delegate:MyProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //  su.font = su.font.withSize(50)
+        //self.navigationController?.navigationBar.isHidden = false
+//          su.font = su.font.withSize(50)
         // Do any additional setup after loading the view.
     }
 
@@ -37,16 +42,16 @@ class SignUPViewController: UIViewController {
             self.present(alt, animated: true, completion: nil)
             
         }else if pwd.text != pwd1.text{
-//            let vc = ViewController(nibName: "View", bundle: nil)
             let alt = UIAlertController(title: "Confirm Password", message: "Password Can't match, Enter Same Password", preferredStyle: UIAlertControllerStyle.alert)
             alt.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default,handler: nil))
             self.present(alt, animated: true, completion: nil)
         }else {
             var fs = self.firstname.text
-            self.navigationController?.popViewController(animated: true)
+            let vc = ViewController(nibName: "View", bundle: nil)
+            self.navigationController?.pushViewController(vc, animated: true)
         }
         let pd = pwd.text
-        delegate?.passvalue(valueset: pd)
+        delegate?.passvalue(valueSent: pd)
     }
       /*
     // MARK: - Navigation
