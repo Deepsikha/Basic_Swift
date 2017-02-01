@@ -17,6 +17,7 @@ class loaddata_json: UITableViewController {
     @IBOutlet var TableViewJson: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "JSON"
         let cellReuseIdentifier = "FourthScreenCell"
         
         TableViewJson.register(UINib(nibName: "FourthScreenCell", bundle: nil), forCellReuseIdentifier: cellReuseIdentifier)
@@ -29,9 +30,9 @@ class loaddata_json: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle = .delete {
-            
-        }
+//        if editingStyle = .delete {
+//            
+//        }
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -48,6 +49,7 @@ class loaddata_json: UITableViewController {
     }
     
     func start_parse(_ data :Data) {
+        
         let dict: NSDictionary!=(try! JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers)) as! NSDictionary
         
         for i in 0  ..< (dict.value(forKey: "MONDAY") as! NSArray).count
@@ -83,8 +85,13 @@ class loaddata_json: UITableViewController {
         let strTitle : NSString=(arrDict[indexPath.row] as AnyObject).value(forKey: "TITLE") as! NSString
         
         let strDescription : NSString=(arrDict[indexPath.row] as AnyObject).value(forKey: "DETAILS") as! NSString
+        
+        let time : NSString = (arrDict[indexPath.row] as AnyObject).value(forKey: "TIME") as! NSString
+        
         cell.lblCell.text=strTitle as String
-        cell.lblcell1.text=strDescription as String
+        cell.lblCell1.text=strDescription as String
+        cell.lblCell2.text=time as String
+        
         return cell
     }
     

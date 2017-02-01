@@ -11,7 +11,8 @@ import UIKit
 class FourthScreenCell: UITableViewCell {
 
     @IBOutlet var lblCell: UILabel!
-    @IBOutlet var lblcell1: UILabel!
+    @IBOutlet var lblCell1: UILabel!
+    @IBOutlet var lblCell2: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
