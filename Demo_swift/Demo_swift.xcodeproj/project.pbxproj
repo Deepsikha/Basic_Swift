@@ -9,10 +9,8 @@
 /* Begin PBXBuildFile section */
 		7D23BEEA1E3C6963009FDDAD /* fourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D23BEE91E3C6963009FDDAD /* fourthViewController.swift */; };
 		7D23BEEC1E3C6AF7009FDDAD /* fourthView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D23BEEB1E3C6AF7009FDDAD /* fourthView.xib */; };
-		7D23BEF41E3C93B2009FDDAD /* back_login.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D23BEF31E3C93B2009FDDAD /* back_login.png */; };
 		7D23BEF61E3C93F1009FDDAD /* SignUPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D23BEF51E3C93F1009FDDAD /* SignUPViewController.swift */; };
 		7D23BEF81E3C9400009FDDAD /* SignUPView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D23BEF71E3C9400009FDDAD /* SignUPView.xib */; };
-		7D2EFCF01E3B23D1005F5BC0 /* blank-clock-face-hour-minute-second-hands-isolated-white-background-just-set-your-own-time-38762402.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7D2EFCEF1E3B23D1005F5BC0 /* blank-clock-face-hour-minute-second-hands-isolated-white-background-just-set-your-own-time-38762402.jpg */; };
 		7D2EFCF21E3B2F70005F5BC0 /* RatingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2EFCF11E3B2F70005F5BC0 /* RatingController.swift */; };
 		7D2EFCF41E3B4DBA005F5BC0 /* RC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2EFCF31E3B4DBA005F5BC0 /* RC.swift */; };
 		7D2EFCFA1E3B68DD005F5BC0 /* demo_rt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2EFCF91E3B68DD005F5BC0 /* demo_rt.swift */; };
@@ -32,6 +30,11 @@
 		7D5E64051E40613D00E04121 /* FourthScreenCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D5E64031E40613D00E04121 /* FourthScreenCell.xib */; };
 		7D5E640A1E4070FD00E04121 /* TableHeaderFooterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5E64081E4070FD00E04121 /* TableHeaderFooterViewController.swift */; };
 		7D5E640B1E4070FD00E04121 /* TableHeaderFooterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D5E64091E4070FD00E04121 /* TableHeaderFooterViewController.xib */; };
+		7D6E0A951E41B1D700B0B38C /* loaddata_json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6E0A931E41B1D700B0B38C /* loaddata_json.swift */; };
+		7D6E0A961E41B1D700B0B38C /* loaddata_json.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D6E0A941E41B1D700B0B38C /* loaddata_json.xib */; };
+		7D6E0AA01E41B9F100B0B38C /* back_login.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D6E0A9C1E41B9F100B0B38C /* back_login.png */; };
+		7D6E0AA11E41B9F100B0B38C /* blank-clock-face-hour-minute-second-hands-isolated-white-background-just-set-your-own-time-38762402.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7D6E0A9D1E41B9F100B0B38C /* blank-clock-face-hour-minute-second-hands-isolated-white-background-just-set-your-own-time-38762402.jpg */; };
+		7D6E0AA41E41BB5D00B0B38C /* days.json in Resources */ = {isa = PBXBuildFile; fileRef = 7D6E0AA31E41BB5D00B0B38C /* days.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,10 +57,8 @@
 /* Begin PBXFileReference section */
 		7D23BEE91E3C6963009FDDAD /* fourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fourthViewController.swift; sourceTree = "<group>"; };
 		7D23BEEB1E3C6AF7009FDDAD /* fourthView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = fourthView.xib; sourceTree = "<group>"; };
-		7D23BEF31E3C93B2009FDDAD /* back_login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_login.png; sourceTree = "<group>"; };
 		7D23BEF51E3C93F1009FDDAD /* SignUPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUPViewController.swift; sourceTree = "<group>"; };
 		7D23BEF71E3C9400009FDDAD /* SignUPView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUPView.xib; sourceTree = "<group>"; };
-		7D2EFCEF1E3B23D1005F5BC0 /* blank-clock-face-hour-minute-second-hands-isolated-white-background-just-set-your-own-time-38762402.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "blank-clock-face-hour-minute-second-hands-isolated-white-background-just-set-your-own-time-38762402.jpg"; sourceTree = "<group>"; };
 		7D2EFCF11E3B2F70005F5BC0 /* RatingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingController.swift; sourceTree = "<group>"; };
 		7D2EFCF31E3B4DBA005F5BC0 /* RC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RC.swift; path = ../RC.swift; sourceTree = "<group>"; };
 		7D2EFCF91E3B68DD005F5BC0 /* demo_rt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = demo_rt.swift; sourceTree = "<group>"; };
@@ -83,6 +84,11 @@
 		7D5E64031E40613D00E04121 /* FourthScreenCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FourthScreenCell.xib; sourceTree = "<group>"; };
 		7D5E64081E4070FD00E04121 /* TableHeaderFooterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableHeaderFooterViewController.swift; sourceTree = "<group>"; };
 		7D5E64091E4070FD00E04121 /* TableHeaderFooterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TableHeaderFooterViewController.xib; path = ../ViewController/TableHeaderFooterViewController.xib; sourceTree = "<group>"; };
+		7D6E0A931E41B1D700B0B38C /* loaddata_json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loaddata_json.swift; sourceTree = "<group>"; };
+		7D6E0A941E41B1D700B0B38C /* loaddata_json.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = loaddata_json.xib; path = ../ViewController/loaddata_json.xib; sourceTree = "<group>"; };
+		7D6E0A9C1E41B9F100B0B38C /* back_login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_login.png; sourceTree = "<group>"; };
+		7D6E0A9D1E41B9F100B0B38C /* blank-clock-face-hour-minute-second-hands-isolated-white-background-just-set-your-own-time-38762402.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "blank-clock-face-hour-minute-second-hands-isolated-white-background-just-set-your-own-time-38762402.jpg"; sourceTree = "<group>"; };
+		7D6E0AA31E41BB5D00B0B38C /* days.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = days.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,23 +125,6 @@
 			path = "custom cell";
 			sourceTree = "<group>";
 		};
-		7D2EFCED1E3B23D1005F5BC0 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				7D2EFCEE1E3B23D1005F5BC0 /* Images */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		7D2EFCEE1E3B23D1005F5BC0 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				7D2EFCEF1E3B23D1005F5BC0 /* blank-clock-face-hour-minute-second-hands-isolated-white-background-just-set-your-own-time-38762402.jpg */,
-				7D23BEF31E3C93B2009FDDAD /* back_login.png */,
-			);
-			path = Images;
-			sourceTree = "<group>";
-		};
 		7D4AE0401E38ABCB00F1DED1 = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +154,7 @@
 				7D0B70081E3F3CAC006EAD93 /* custom cell */,
 				7D4AE0861E38BCF900F1DED1 /* ViewController */,
 				7D4AE08A1E38BCF900F1DED1 /* xib */,
+				7D6E0A9A1E41B9F100B0B38C /* Resources */,
 				7D4AE0501E38ABCC00F1DED1 /* Main.storyboard */,
 				7D4AE0531E38ABCC00F1DED1 /* Assets.xcassets */,
 				7D4AE0551E38ABCC00F1DED1 /* LaunchScreen.storyboard */,
@@ -201,6 +191,7 @@
 				7D4AE0981E38C7C700F1DED1 /* ThirdViewController.swift */,
 				7D5E64081E4070FD00E04121 /* TableHeaderFooterViewController.swift */,
 				7D4AE0871E38BCF900F1DED1 /* SecondViewController.swift */,
+				7D6E0A931E41B1D700B0B38C /* loaddata_json.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -210,13 +201,40 @@
 			children = (
 				7D4AE08B1E38BCF900F1DED1 /* secondView.xib */,
 				7D5E64091E4070FD00E04121 /* TableHeaderFooterViewController.xib */,
+				7D6E0A941E41B1D700B0B38C /* loaddata_json.xib */,
 				7D23BEF71E3C9400009FDDAD /* SignUPView.xib */,
 				7D23BEEB1E3C6AF7009FDDAD /* fourthView.xib */,
 				7D4AE08C1E38BCF900F1DED1 /* View.xib */,
 				7D4AE0961E38C7A700F1DED1 /* thirdView.xib */,
-				7D2EFCED1E3B23D1005F5BC0 /* Resources */,
 			);
 			path = xib;
+			sourceTree = "<group>";
+		};
+		7D6E0A9A1E41B9F100B0B38C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7D6E0A9B1E41B9F100B0B38C /* Images */,
+				7D6E0A9E1E41B9F100B0B38C /* JSON file */,
+			);
+			name = Resources;
+			path = xib/Resources;
+			sourceTree = "<group>";
+		};
+		7D6E0A9B1E41B9F100B0B38C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				7D6E0A9C1E41B9F100B0B38C /* back_login.png */,
+				7D6E0A9D1E41B9F100B0B38C /* blank-clock-face-hour-minute-second-hands-isolated-white-background-just-set-your-own-time-38762402.jpg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		7D6E0A9E1E41B9F100B0B38C /* JSON file */ = {
+			isa = PBXGroup;
+			children = (
+				7D6E0AA31E41BB5D00B0B38C /* days.json */,
+			);
+			path = "JSON file";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,15 +346,17 @@
 			files = (
 				7D4AE0571E38ABCC00F1DED1 /* LaunchScreen.storyboard in Resources */,
 				7D4AE0911E38BCF900F1DED1 /* View.xib in Resources */,
+				7D6E0AA41E41BB5D00B0B38C /* days.json in Resources */,
 				7D23BEEC1E3C6AF7009FDDAD /* fourthView.xib in Resources */,
 				7D5E640B1E4070FD00E04121 /* TableHeaderFooterViewController.xib in Resources */,
-				7D2EFCF01E3B23D1005F5BC0 /* blank-clock-face-hour-minute-second-hands-isolated-white-background-just-set-your-own-time-38762402.jpg in Resources */,
-				7D23BEF41E3C93B2009FDDAD /* back_login.png in Resources */,
+				7D6E0A961E41B1D700B0B38C /* loaddata_json.xib in Resources */,
 				7D4AE0541E38ABCC00F1DED1 /* Assets.xcassets in Resources */,
+				7D6E0AA11E41B9F100B0B38C /* blank-clock-face-hour-minute-second-hands-isolated-white-background-just-set-your-own-time-38762402.jpg in Resources */,
 				7D4AE0901E38BCF900F1DED1 /* secondView.xib in Resources */,
 				7D4AE0971E38C7A700F1DED1 /* thirdView.xib in Resources */,
 				7D5E64051E40613D00E04121 /* FourthScreenCell.xib in Resources */,
 				7D23BEF81E3C9400009FDDAD /* SignUPView.xib in Resources */,
+				7D6E0AA01E41B9F100B0B38C /* back_login.png in Resources */,
 				7D4AE0521E38ABCC00F1DED1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,6 +383,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D5E640A1E4070FD00E04121 /* TableHeaderFooterViewController.swift in Sources */,
+				7D6E0A951E41B1D700B0B38C /* loaddata_json.swift in Sources */,
 				7D4AE08D1E38BCF900F1DED1 /* SecondViewController.swift in Sources */,
 				7D5E64041E40613D00E04121 /* FourthScreenCell.swift in Sources */,
 				7D23BEF61E3C93F1009FDDAD /* SignUPViewController.swift in Sources */,

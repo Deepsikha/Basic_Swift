@@ -15,6 +15,7 @@
                 <outlet property="email" destination="a2i-68-TpD" id="fWD-3f-1Nu"/>
                 <outlet property="label" destination="F4e-Zl-ee9" id="8bn-u6-fuc"/>
                 <outlet property="pwd" destination="97N-vw-aJx" id="B4V-4V-7jx"/>
+                <outlet property="submit" destination="RWO-3U-t4Q" id="IB1-Id-fje"/>
                 <outlet property="view" destination="iN0-l3-epB" id="k2d-Mu-yeT"/>
             </connections>
         </placeholder>

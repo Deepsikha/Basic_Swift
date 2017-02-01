@@ -47,8 +47,6 @@ class ThirdViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
-//        let cell = tableViewController.dequeueReusableCell(withIdentifier: "cell", for: indexPath as IndexPath)
-        
         let row = indexPath.row
         cell.textLabel?.text = tableData[row]
         tableView.separatorStyle = UITableViewCellSeparatorStyle.singleLine
@@ -59,28 +57,7 @@ class ThirdViewController: UIViewController, UITableViewDataSource, UITableViewD
         tableData.append(textData.text!)
         //textData.resignFirstResponder()
         tableViewController.reloadData()
-    }
-    
-//    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-//        let row = indexPath.row
-//        tableData.remove(at: row)
-//        textData.resignFirstResponder()
-//        tableViewController.reloadData()
-//        return true
-//    }
-//    
-//    
-//    
-//    @IBAction func updateData(_ sender: UIButton) {
-//        tableData.append(textData.text!)
-//        textData.resignFirstResponder()
-//        tableViewController.reloadData()
-//
-//    }
-
-    
-    
-    
+    }   
 
     /*
     // MARK: - Navigation

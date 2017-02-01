@@ -11,6 +11,8 @@ import UIKit
 class FourthScreenCell: UITableViewCell {
 
     @IBOutlet var lblCell: UILabel!
+    @IBOutlet var lblCell1: UILabel!
+    @IBOutlet var lblCell2: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,5 +23,4 @@ class FourthScreenCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
 }
