@@ -8,24 +8,50 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UICollectionViewDataSource {
 
         let identifier = "CellIdentifier"
         let dataSource = DataSource()
     @IBOutlet var collectionView: UICollectionView!
+    @IBOutlet var toolBar: UIToolbar!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        collectionView.dataSource = self
-        collectionView.delegate = self
+//        collectionView.dataSource = self
+//        collectionView.delegate = self
         
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        if let indexPath = getIndexPathForSelectedCell() {
+            highlightCell(indexPath, flag: false)
+        }
+    }
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    extension ViewController : UICollectionViewDataSource {
+
+    // MARK:- prepareForSegue
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        // retrieve selected cell & fruit
+        
+        if let indexPath = getIndexPathForSelectedCell() {
+            
+            let fruit = dataSource.fruitsInGroup(indexPath.section)[indexPath.row]
+            
+            let detailViewController = segue.destination as! DetailViewController
+            detailViewController.fruit = fruit
+        }
+    }
+    
         func numberOfSections(in collectionView: UICollectionView) -> Int {
             return dataSource.groups.count
         }
@@ -56,7 +82,5 @@ class ViewController: UIViewController {
             
             return headerView
         }
-    }
-
 }
 
