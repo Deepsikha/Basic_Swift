@@ -95,7 +95,8 @@ class loaddata_json: UITableViewController {
         
         return cell
         
-        /* edit cell action by third party library.
+        /* edit cell action using by third party library.
+         
         let reuseIdentifier = "programmaticCell"
         var cell = self.table.dequeueReusableCellWithIdentifier(reuseIdentifier) as! MGSwipeTableCell!
         if cell == nil
@@ -117,7 +118,8 @@ class loaddata_json: UITableViewController {
             ,MGSwipeButton(title: "More",backgroundColor: UIColor.lightGrayColor())]
         cell.rightSwipeSettings.transition = MGSwipeTransition.Rotate3D
         
-        return cell*/
+        return cell
+        */
     }
     
     override func tableView(_ tableView: UITableView, editActionsForRowAt: IndexPath) -> [UITableViewRowAction]? {
