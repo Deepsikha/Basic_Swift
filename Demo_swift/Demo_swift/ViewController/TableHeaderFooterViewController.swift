@@ -45,7 +45,7 @@ class TableHeaderFooterViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return (flag)
+        return 4
     }
    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -56,7 +56,7 @@ class TableHeaderFooterViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
         
-        cell.textLabel?.text = text[0]
+        cell.textLabel?.text = "a"
         return cell
     }
     

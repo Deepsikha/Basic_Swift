@@ -12,8 +12,9 @@ class loaddata_json: UITableViewController {
     
     var arrDict :NSMutableArray=[]
     
-    let cellReuseIdentifier = "FourthScreenCell"
+    var cellReuseIdentifier = "FourthScreenCell"
 
+    var strTitle:NSString = ""
     @IBOutlet var TableViewJson: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -126,6 +127,7 @@ class loaddata_json: UITableViewController {
         
         // edit action using by default property
         let Edit = UITableViewRowAction(style: .normal, title: "Edit") { action, index in
+//            self.cellReuseIdentifier.remove(at: strTitle.IndexPath)
             print("Edit button tapped")
         }
         Edit.backgroundColor = .lightGray
@@ -145,7 +147,17 @@ class loaddata_json: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("select")
     }
-
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        
+        return true
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        return "NEXT"
+    }
+    
+    
     /*
     // MARK: - Navigation
 
