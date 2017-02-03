@@ -81,7 +81,15 @@ class loaddata_json: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        /* for insert data into accesnding order.
+         
+         cell.imgView.image = UIImage(named: ((jsonDict[indexPath.row] as AnyObject).value(forKey: "image") as? String)!)
+         cell.lblName.text = (jsonDict[indexPath.row] as AnyObject).value(forKey: "name") as? String
+         cell.lblSubtitle.text = age1[indexPath.section][indexPath.row]
+         return cell
+         */
         
+        //directily insert data without sorting.
         let cell:FourthScreenCell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath) as! FourthScreenCell
         
         let strTitle : NSString=(arrDict[indexPath.row] as AnyObject).value(forKey: "TITLE") as! NSString

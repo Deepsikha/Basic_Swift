@@ -45,7 +45,7 @@ class TableHeaderFooterViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 4
+        return textdata.count
     }
    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -60,6 +60,14 @@ class TableHeaderFooterViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let Delete = UITableViewRowAction(style: .normal, title: "Delete") { action, index in
+            print("Delete button tapped")
+        }
+        Delete.backgroundColor = .red
+        
+        return [Delete]
+    }
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
         switch (section) {
