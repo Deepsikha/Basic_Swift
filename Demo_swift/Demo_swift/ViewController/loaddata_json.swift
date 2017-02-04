@@ -144,6 +144,7 @@ class loaddata_json: UITableViewController                       {
         
         let Delete = UITableViewRowAction(style: .normal, title: "Delete") { action, index in
             print("Delete button tapped")
+//            self.wrt()
         }
         Delete.backgroundColor = .red
         
