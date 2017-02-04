@@ -37,6 +37,7 @@
 		7D6E0AA01E41B9F100B0B38C /* back_login.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D6E0A9C1E41B9F100B0B38C /* back_login.png */; };
 		7D6E0AA11E41B9F100B0B38C /* blank-clock-face-hour-minute-second-hands-isolated-white-background-just-set-your-own-time-38762402.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7D6E0A9D1E41B9F100B0B38C /* blank-clock-face-hour-minute-second-hands-isolated-white-background-just-set-your-own-time-38762402.jpg */; };
 		7D6E0AA41E41BB5D00B0B38C /* days.json in Resources */ = {isa = PBXBuildFile; fileRef = 7D6E0AA31E41BB5D00B0B38C /* days.json */; };
+		7D75255C1E45E05F000D73F3 /* acce_controllerTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D75255B1E45E05F000D73F3 /* acce_controllerTableViewController.xib */; };
 		97E7E52C30D856C797F73DA1 /* Pods_Demo_swiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12E5B6BA7309958E388BFDF5 /* Pods_Demo_swiftUITests.framework */; };
 		B2C0802BB993DA65FF5C2FE3 /* Pods_Demo_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB3E612F086C7942A055EE4 /* Pods_Demo_swift.framework */; };
 		C5B25F3CBE954754528F0CFD /* Pods_Demo_swiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B662FA95367487BB68EC698 /* Pods_Demo_swiftTests.framework */; };
@@ -100,6 +101,7 @@
 		7D6E0A9C1E41B9F100B0B38C /* back_login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_login.png; sourceTree = "<group>"; };
 		7D6E0A9D1E41B9F100B0B38C /* blank-clock-face-hour-minute-second-hands-isolated-white-background-just-set-your-own-time-38762402.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "blank-clock-face-hour-minute-second-hands-isolated-white-background-just-set-your-own-time-38762402.jpg"; sourceTree = "<group>"; };
 		7D6E0AA31E41BB5D00B0B38C /* days.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = days.json; sourceTree = "<group>"; };
+		7D75255B1E45E05F000D73F3 /* acce_controllerTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = acce_controllerTableViewController.xib; sourceTree = "<group>"; };
 		7DB458A51E433A9B00ED3447 /* Demo_swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Demo_swift-Bridging-Header.h"; path = "custom cell/Demo_swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		A9B133978D7F81598A909352 /* Pods-Demo_swiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo_swiftUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Demo_swiftUITests/Pods-Demo_swiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E8AC384B0071178EC0D3CC7C /* Pods-Demo_swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo_swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Demo_swift/Pods-Demo_swift.debug.xcconfig"; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 			children = (
 				7D4AE08B1E38BCF900F1DED1 /* secondView.xib */,
 				7D5E64091E4070FD00E04121 /* TableHeaderFooterViewController.xib */,
+				7D75255B1E45E05F000D73F3 /* acce_controllerTableViewController.xib */,
 				7D6E0A941E41B1D700B0B38C /* loaddata_json.xib */,
 				7D23BEF71E3C9400009FDDAD /* SignUPView.xib */,
 				7D23BEEB1E3C6AF7009FDDAD /* fourthView.xib */,
@@ -415,6 +418,7 @@
 				7D5E64051E40613D00E04121 /* FourthScreenCell.xib in Resources */,
 				7D23BEF81E3C9400009FDDAD /* SignUPView.xib in Resources */,
 				7D61C61B1E4483490021C038 /* ButtonCell.xib in Resources */,
+				7D75255C1E45E05F000D73F3 /* acce_controllerTableViewController.xib in Resources */,
 				7D6E0AA01E41B9F100B0B38C /* back_login.png in Resources */,
 				7D4AE0521E38ABCC00F1DED1 /* Main.storyboard in Resources */,
 			);
