@@ -8,24 +8,28 @@
 
 import UIKit
 
-class loaddata_json: UITableViewController {
+class loaddata_json: UITableViewController                       {
     
     var arrDict :NSMutableArray=[]
     
-    let cellReuseIdentifier = "FourthScreenCell"
+    var cellReuseIdentifier = "btnCell"
 
+    var strTitle:NSString = ""
+    
+    
     @IBOutlet var TableViewJson: UITableView!
     override func viewDidLoad() {
+        let btn:ButtonCell = ButtonCell()
         super.viewDidLoad()
         self.title = "JSON"
-        let cellReuseIdentifier = "FourthScreenCell"
+//        let cellReuseIdentifier = "btnCell"
         
-        TableViewJson.register(UINib(nibName: "FourthScreenCell", bundle: nil), forCellReuseIdentifier: cellReuseIdentifier)
+        TableViewJson.register(UINib(nibName: "ButtonCell", bundle: nil), forCellReuseIdentifier: cellReuseIdentifier)
         
          self.clearsSelectionOnViewWillAppear = false
 
          self.navigationItem.rightBarButtonItem = self.editButtonItem
-        
+        btn.Load()
         parsingdata()
     }
 
@@ -80,8 +84,16 @@ class loaddata_json: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        /* for insert data into accesnding order.
+         
+         cell.imgView.image = UIImage(named: ((jsonDict[indexPath.row] as AnyObject).value(forKey: "image") as? String)!)
+         cell.lblName.text = (jsonDict[indexPath.row] as AnyObject).value(forKey: "name") as? String
+         cell.lblSubtitle.text = age1[indexPath.section][indexPath.row]
+         return cell
+         */
         
-        let cell:FourthScreenCell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath) as! FourthScreenCell
+        //directily insert data without sorting.
+        let cell:ButtonCell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath) as! ButtonCell
         
         let strTitle : NSString=(arrDict[indexPath.row] as AnyObject).value(forKey: "TITLE") as! NSString
         
@@ -89,8 +101,8 @@ class loaddata_json: UITableViewController {
         
         let time : NSString = (arrDict[indexPath.row] as AnyObject).value(forKey: "TIME") as! NSString
         
-        cell.lblCell.text=strTitle as String
-        cell.lblCell1.text=strDescription as String
+        cell.lbl.text=strTitle as String
+        cell.lblCell.text=strDescription as String
         cell.lblCell2.text=time as String
         
         return cell
@@ -126,6 +138,7 @@ class loaddata_json: UITableViewController {
         
         // edit action using by default property
         let Edit = UITableViewRowAction(style: .normal, title: "Edit") { action, index in
+//            self.cellReuseIdentifier.remove(at: strTitle.IndexPath)
             print("Edit button tapped")
         }
         Edit.backgroundColor = .lightGray
@@ -145,7 +158,17 @@ class loaddata_json: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("select")
     }
-
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        
+        return true
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        return "NEXT"
+    }
+    
+    
     /*
     // MARK: - Navigation
 
