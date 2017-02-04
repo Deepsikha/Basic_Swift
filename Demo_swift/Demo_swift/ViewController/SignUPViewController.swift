@@ -46,7 +46,7 @@ class SignUPViewController: UIViewController {
             alt.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default,handler: nil))
             self.present(alt, animated: true, completion: nil)
         }else {
-            var fs = self.firstname.text
+            _ = self.firstname.text
             let vc = ViewController(nibName: "View", bundle: nil)
             self.navigationController?.pushViewController(vc, animated: true)
         }

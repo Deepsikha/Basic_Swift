@@ -8,25 +8,28 @@
 
 import UIKit
 
-class loaddata_json: UITableViewController {
+class loaddata_json: UITableViewController                       {
     
     var arrDict :NSMutableArray=[]
     
-    var cellReuseIdentifier = "FourthScreenCell"
+    var cellReuseIdentifier = "btnCell"
 
     var strTitle:NSString = ""
+    
+    
     @IBOutlet var TableViewJson: UITableView!
     override func viewDidLoad() {
+        let btn:ButtonCell = ButtonCell()
         super.viewDidLoad()
         self.title = "JSON"
-        let cellReuseIdentifier = "FourthScreenCell"
+//        let cellReuseIdentifier = "btnCell"
         
-        TableViewJson.register(UINib(nibName: "FourthScreenCell", bundle: nil), forCellReuseIdentifier: cellReuseIdentifier)
+        TableViewJson.register(UINib(nibName: "ButtonCell", bundle: nil), forCellReuseIdentifier: cellReuseIdentifier)
         
          self.clearsSelectionOnViewWillAppear = false
 
          self.navigationItem.rightBarButtonItem = self.editButtonItem
-        
+        btn.Load()
         parsingdata()
     }
 
@@ -90,7 +93,7 @@ class loaddata_json: UITableViewController {
          */
         
         //directily insert data without sorting.
-        let cell:FourthScreenCell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath) as! FourthScreenCell
+        let cell:ButtonCell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath) as! ButtonCell
         
         let strTitle : NSString=(arrDict[indexPath.row] as AnyObject).value(forKey: "TITLE") as! NSString
         
@@ -98,8 +101,8 @@ class loaddata_json: UITableViewController {
         
         let time : NSString = (arrDict[indexPath.row] as AnyObject).value(forKey: "TIME") as! NSString
         
-        cell.lblCell.text=strTitle as String
-        cell.lblCell1.text=strDescription as String
+        cell.lbl.text=strTitle as String
+        cell.lblCell.text=strDescription as String
         cell.lblCell2.text=time as String
         
         return cell
