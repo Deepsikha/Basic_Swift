@@ -25,12 +25,11 @@ class loaddata_json: UITableViewController                       {
 //        let cellReuseIdentifier = "btnCell"
         
         TableViewJson.register(UINib(nibName: "ButtonCell", bundle: nil), forCellReuseIdentifier: cellReuseIdentifier)
-        
          self.clearsSelectionOnViewWillAppear = false
-
          self.navigationItem.rightBarButtonItem = self.editButtonItem
-        btn.Load()
-        parsingdata()
+        btn.Load();
+        
+        self.parsingdata()
     }
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
@@ -145,6 +144,7 @@ class loaddata_json: UITableViewController                       {
         
         let Delete = UITableViewRowAction(style: .normal, title: "Delete") { action, index in
             print("Delete button tapped")
+//            self.wrt()
         }
         Delete.backgroundColor = .red
         
@@ -156,6 +156,7 @@ class loaddata_json: UITableViewController                       {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         print("select")
     }
     
@@ -167,7 +168,36 @@ class loaddata_json: UITableViewController                       {
     override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
         return "NEXT"
     }
-    
+    /* Function for Write Data into File.
+    func wrt(json: AnyObject){
+        print("ABCD")
+        do {
+            let data1 =  try JSONSerialization.data(withJSONObject: json, options: JSONSerialization.WritingOptions.prettyPrinted) // first of all convert json to the data
+            let convertedString = String(data: data1, encoding: String.Encoding.utf8) // the data will be converted to the string
+            print(convertedString!) // <-- here is ur string
+            let text = "{\n\t\"person\":"+convertedString!+"\n}"
+            
+            if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+                
+                let path = "/Users/itilak/Desktop/swift/sampleproject/sampleproject/1.json"
+                
+                do {
+                    try text.write(toFile: path,  atomically: true, encoding: String.Encoding.utf8)
+                    print("Successful")
+                }
+                catch {
+                    print("Writing not performed")
+                }
+            }
+            else{
+                print("Jaadu kei ni jai")
+            }
+        }
+        catch{
+            print("Error")
+        }
+    }
+    */
     
     /*
     // MARK: - Navigation
@@ -178,5 +208,4 @@ class loaddata_json: UITableViewController                       {
         // Pass the selected object to the new view controller.
     }
     */
-    
 }
