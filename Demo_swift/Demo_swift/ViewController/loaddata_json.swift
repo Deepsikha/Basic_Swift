@@ -8,7 +8,7 @@
 
 import UIKit
 
-class loaddata_json: UITableViewController                       {
+class loaddata_json: UITableViewController {
     
     var arrDict :NSMutableArray=[]
     
