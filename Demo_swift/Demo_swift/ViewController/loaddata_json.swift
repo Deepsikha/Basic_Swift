@@ -11,23 +11,17 @@ import UIKit
 class loaddata_json: UITableViewController {
     
     var arrDict :NSMutableArray=[]
-    
     var cellReuseIdentifier = "btnCell"
-
     var strTitle:NSString = ""
-    
-    
     @IBOutlet var TableViewJson: UITableView!
+    
     override func viewDidLoad() {
-        let btn:ButtonCell = ButtonCell()
         super.viewDidLoad()
         self.title = "JSON"
-//        let cellReuseIdentifier = "btnCell"
-        
-        TableViewJson.register(UINib(nibName: "ButtonCell", bundle: nil), forCellReuseIdentifier: cellReuseIdentifier)
-         self.clearsSelectionOnViewWillAppear = false
-         self.navigationItem.rightBarButtonItem = self.editButtonItem
-        btn.Load();
+       
+        TableViewJson.register(UINib(nibName: "btnCell", bundle: nil), forCellReuseIdentifier: cellReuseIdentifier)
+//         self.clearsSelectionOnViewWillAppear = false
+//         self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         self.parsingdata()
     }
@@ -73,12 +67,10 @@ class loaddata_json: UITableViewController {
         // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return arrDict.count
     }
     
@@ -92,7 +84,7 @@ class loaddata_json: UITableViewController {
          */
         
         //directily insert data without sorting.
-        let cell:ButtonCell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath) as! ButtonCell
+        let cell:btnCell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath) as! btnCell
         
         let strTitle : NSString=(arrDict[indexPath.row] as AnyObject).value(forKey: "TITLE") as! NSString
         
@@ -100,12 +92,14 @@ class loaddata_json: UITableViewController {
         
         let time : NSString = (arrDict[indexPath.row] as AnyObject).value(forKey: "TIME") as! NSString
         
-        cell.lbl.text=strTitle as String
-        cell.lblCell.text=strDescription as String
-        cell.lblCell2.text=time as String
+//        cell.lblCell.text=strTitle as String
+//        cell.lblCell1.text=strDescription as String
+//        cell.lblCell2.text=time as String
+        cell.lbl1.text = strTitle as String
+        cell.lbl2.text = strDescription as String
         
         return cell
-        
+    }
         /* edit cell action using by third party library.
          
         let reuseIdentifier = "programmaticCell"
@@ -130,29 +124,27 @@ class loaddata_json: UITableViewController {
         cell.rightSwipeSettings.transition = MGSwipeTransition.Rotate3D
         
         return cell
+     }
         */
-    }
     
-    override func tableView(_ tableView: UITableView, editActionsForRowAt: IndexPath) -> [UITableViewRowAction]? {
-        
-        // edit action using by default property
-        let Edit = UITableViewRowAction(style: .normal, title: "Edit") { action, index in
-//            self.cellReuseIdentifier.remove(at: strTitle.IndexPath)
-            print("Edit button tapped")
-        }
-        Edit.backgroundColor = .lightGray
-        
-        let Delete = UITableViewRowAction(style: .normal, title: "Delete") { action, index in
-            print("Delete button tapped")
-//            self.wrt()
-        }
-        Delete.backgroundColor = .red
-        
-        return [Delete, Edit]
-    }
-    
+//    override func tableView(_ tableView: UITableView, editActionsForRowAt: IndexPath) -> [UITableViewRowAction]? {
+//        
+//        // edit action using by default property
+//        let Edit = UITableViewRowAction(style: .normal, title: "Edit") { action, index in
+//            print("Edit button tapped")
+//        }
+//        Edit.backgroundColor = .lightGray
+//        
+//        let Delete = UITableViewRowAction(style: .normal, title: "Delete") { action, index in
+//            print("Delete button tapped")
+//        }
+//        Delete.backgroundColor = .red
+//        
+//        return [Delete, Edit]
+//    }
+//    
     override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        print("Deselect")
+        
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -190,7 +182,7 @@ class loaddata_json: UITableViewController {
                 }
             }
             else{
-                print("Jaadu kei ni jai")
+                print("Success")
             }
         }
         catch{

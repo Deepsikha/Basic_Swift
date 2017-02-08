@@ -29,9 +29,13 @@
 		7D5E64051E40613D00E04121 /* FourthScreenCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D5E64031E40613D00E04121 /* FourthScreenCell.xib */; };
 		7D5E640A1E4070FD00E04121 /* TableHeaderFooterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5E64081E4070FD00E04121 /* TableHeaderFooterViewController.swift */; };
 		7D5E640B1E4070FD00E04121 /* TableHeaderFooterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D5E64091E4070FD00E04121 /* TableHeaderFooterViewController.xib */; };
-		7D61C61A1E4483490021C038 /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D61C6181E4483490021C038 /* ButtonCell.swift */; };
-		7D61C61B1E4483490021C038 /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D61C6191E4483490021C038 /* ButtonCell.xib */; };
 		7D61C61D1E44A0840021C038 /* acce_controllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D61C61C1E44A0840021C038 /* acce_controllerTableViewController.swift */; };
+		7D627D1C1E4AD6CE001AE311 /* Demo_Scroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D627D1A1E4AD6CE001AE311 /* Demo_Scroll.swift */; };
+		7D627D1D1E4AD6CE001AE311 /* Demo_Scroll.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D627D1B1E4AD6CE001AE311 /* Demo_Scroll.xib */; };
+		7D627D241E4AE54A001AE311 /* btnCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D627D221E4AE54A001AE311 /* btnCell.swift */; };
+		7D627D251E4AE54A001AE311 /* btnCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D627D231E4AE54A001AE311 /* btnCell.xib */; };
+		7D627D281E4AE83E001AE311 /* btnController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D627D261E4AE83E001AE311 /* btnController.swift */; };
+		7D627D291E4AE83E001AE311 /* btnController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D627D271E4AE83E001AE311 /* btnController.xib */; };
 		7D6E0A951E41B1D700B0B38C /* loaddata_json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6E0A931E41B1D700B0B38C /* loaddata_json.swift */; };
 		7D6E0A961E41B1D700B0B38C /* loaddata_json.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D6E0A941E41B1D700B0B38C /* loaddata_json.xib */; };
 		7D6E0AA01E41B9F100B0B38C /* back_login.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D6E0A9C1E41B9F100B0B38C /* back_login.png */; };
@@ -93,9 +97,13 @@
 		7D5E64031E40613D00E04121 /* FourthScreenCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FourthScreenCell.xib; sourceTree = "<group>"; };
 		7D5E64081E4070FD00E04121 /* TableHeaderFooterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableHeaderFooterViewController.swift; sourceTree = "<group>"; };
 		7D5E64091E4070FD00E04121 /* TableHeaderFooterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TableHeaderFooterViewController.xib; path = ../ViewController/TableHeaderFooterViewController.xib; sourceTree = "<group>"; };
-		7D61C6181E4483490021C038 /* ButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
-		7D61C6191E4483490021C038 /* ButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
 		7D61C61C1E44A0840021C038 /* acce_controllerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = acce_controllerTableViewController.swift; sourceTree = "<group>"; };
+		7D627D1A1E4AD6CE001AE311 /* Demo_Scroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Demo_Scroll.swift; sourceTree = "<group>"; };
+		7D627D1B1E4AD6CE001AE311 /* Demo_Scroll.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Demo_Scroll.xib; path = ../ViewController/Demo_Scroll.xib; sourceTree = "<group>"; };
+		7D627D221E4AE54A001AE311 /* btnCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = btnCell.swift; sourceTree = "<group>"; };
+		7D627D231E4AE54A001AE311 /* btnCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = btnCell.xib; sourceTree = "<group>"; };
+		7D627D261E4AE83E001AE311 /* btnController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = btnController.swift; sourceTree = "<group>"; };
+		7D627D271E4AE83E001AE311 /* btnController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = btnController.xib; path = ../ViewController/btnController.xib; sourceTree = "<group>"; };
 		7D6E0A931E41B1D700B0B38C /* loaddata_json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loaddata_json.swift; sourceTree = "<group>"; };
 		7D6E0A941E41B1D700B0B38C /* loaddata_json.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = loaddata_json.xib; path = ../ViewController/loaddata_json.xib; sourceTree = "<group>"; };
 		7D6E0A9C1E41B9F100B0B38C /* back_login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_login.png; sourceTree = "<group>"; };
@@ -153,8 +161,8 @@
 			children = (
 				7D5E64021E40613D00E04121 /* FourthScreenCell.swift */,
 				7D5E64031E40613D00E04121 /* FourthScreenCell.xib */,
-				7D61C6181E4483490021C038 /* ButtonCell.swift */,
-				7D61C6191E4483490021C038 /* ButtonCell.xib */,
+				7D627D221E4AE54A001AE311 /* btnCell.swift */,
+				7D627D231E4AE54A001AE311 /* btnCell.xib */,
 			);
 			path = "custom cell";
 			sourceTree = "<group>";
@@ -229,6 +237,8 @@
 				7D5E64081E4070FD00E04121 /* TableHeaderFooterViewController.swift */,
 				7D4AE0871E38BCF900F1DED1 /* SecondViewController.swift */,
 				7D6E0A931E41B1D700B0B38C /* loaddata_json.swift */,
+				7D627D261E4AE83E001AE311 /* btnController.swift */,
+				7D627D1A1E4AD6CE001AE311 /* Demo_Scroll.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -237,7 +247,9 @@
 			isa = PBXGroup;
 			children = (
 				7D4AE08B1E38BCF900F1DED1 /* secondView.xib */,
+				7D627D1B1E4AD6CE001AE311 /* Demo_Scroll.xib */,
 				7D5E64091E4070FD00E04121 /* TableHeaderFooterViewController.xib */,
+				7D627D271E4AE83E001AE311 /* btnController.xib */,
 				7D75255B1E45E05F000D73F3 /* acce_controllerTableViewController.xib */,
 				7D6E0A941E41B1D700B0B38C /* loaddata_json.xib */,
 				7D23BEF71E3C9400009FDDAD /* SignUPView.xib */,
@@ -407,17 +419,19 @@
 			files = (
 				7D4AE0571E38ABCC00F1DED1 /* LaunchScreen.storyboard in Resources */,
 				7D4AE0911E38BCF900F1DED1 /* View.xib in Resources */,
+				7D627D251E4AE54A001AE311 /* btnCell.xib in Resources */,
 				7D6E0AA41E41BB5D00B0B38C /* days.json in Resources */,
+				7D627D1D1E4AD6CE001AE311 /* Demo_Scroll.xib in Resources */,
 				7D23BEEC1E3C6AF7009FDDAD /* fourthView.xib in Resources */,
 				7D5E640B1E4070FD00E04121 /* TableHeaderFooterViewController.xib in Resources */,
 				7D6E0A961E41B1D700B0B38C /* loaddata_json.xib in Resources */,
 				7D4AE0541E38ABCC00F1DED1 /* Assets.xcassets in Resources */,
 				7D6E0AA11E41B9F100B0B38C /* blank-clock-face-hour-minute-second-hands-isolated-white-background-just-set-your-own-time-38762402.jpg in Resources */,
+				7D627D291E4AE83E001AE311 /* btnController.xib in Resources */,
 				7D4AE0901E38BCF900F1DED1 /* secondView.xib in Resources */,
 				7D4AE0971E38C7A700F1DED1 /* thirdView.xib in Resources */,
 				7D5E64051E40613D00E04121 /* FourthScreenCell.xib in Resources */,
 				7D23BEF81E3C9400009FDDAD /* SignUPView.xib in Resources */,
-				7D61C61B1E4483490021C038 /* ButtonCell.xib in Resources */,
 				7D75255C1E45E05F000D73F3 /* acce_controllerTableViewController.xib in Resources */,
 				7D6E0AA01E41B9F100B0B38C /* back_login.png in Resources */,
 				7D4AE0521E38ABCC00F1DED1 /* Main.storyboard in Resources */,
@@ -585,17 +599,19 @@
 			files = (
 				7D5E640A1E4070FD00E04121 /* TableHeaderFooterViewController.swift in Sources */,
 				7D6E0A951E41B1D700B0B38C /* loaddata_json.swift in Sources */,
+				7D627D241E4AE54A001AE311 /* btnCell.swift in Sources */,
 				7D4AE08D1E38BCF900F1DED1 /* SecondViewController.swift in Sources */,
+				7D627D1C1E4AD6CE001AE311 /* Demo_Scroll.swift in Sources */,
 				7D5E64041E40613D00E04121 /* FourthScreenCell.swift in Sources */,
 				7D23BEF61E3C93F1009FDDAD /* SignUPViewController.swift in Sources */,
 				7D2EFCFA1E3B68DD005F5BC0 /* demo_rt.swift in Sources */,
 				7D2EFCF21E3B2F70005F5BC0 /* RatingController.swift in Sources */,
 				7D23BEEA1E3C6963009FDDAD /* fourthViewController.swift in Sources */,
 				7D4AE08F1E38BCF900F1DED1 /* ViewController.swift in Sources */,
+				7D627D281E4AE83E001AE311 /* btnController.swift in Sources */,
 				7D4AE0991E38C7C700F1DED1 /* ThirdViewController.swift in Sources */,
 				7D61C61D1E44A0840021C038 /* acce_controllerTableViewController.swift in Sources */,
 				7D4AE04D1E38ABCC00F1DED1 /* AppDelegate.swift in Sources */,
-				7D61C61A1E4483490021C038 /* ButtonCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
