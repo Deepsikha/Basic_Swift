@@ -80,11 +80,11 @@ class TableHeaderFooterViewController: UITableViewController {
         case 3:
             return "D"
         case 4:
-            return "F"
-        case 5:
-            return "G"
-        default:
             return "E"
+        case 5:
+            return "F"
+        default:
+            return "G"
         }
     }
 }

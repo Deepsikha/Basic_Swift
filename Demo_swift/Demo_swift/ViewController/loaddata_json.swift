@@ -11,7 +11,7 @@ import UIKit
 class loaddata_json: UITableViewController {
     
     var arrDict :NSMutableArray=[]
-    var cellReuseIdentifier = "btnCell"
+    var cellReuseIdentifier = "FourthScreenCell"
     var strTitle:NSString = ""
     @IBOutlet var TableViewJson: UITableView!
     
@@ -19,18 +19,14 @@ class loaddata_json: UITableViewController {
         super.viewDidLoad()
         self.title = "JSON"
        
-        TableViewJson.register(UINib(nibName: "btnCell", bundle: nil), forCellReuseIdentifier: cellReuseIdentifier)
+        TableViewJson.register(UINib(nibName: "FourthScreenCell", bundle: nil), forCellReuseIdentifier: cellReuseIdentifier)
 //         self.clearsSelectionOnViewWillAppear = false
 //         self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         self.parsingdata()
     }
 
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-//        if editingStyle = .delete {
-//            
-//        }
-    }
+  
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -84,7 +80,7 @@ class loaddata_json: UITableViewController {
          */
         
         //directily insert data without sorting.
-        let cell:btnCell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath) as! btnCell
+        let cell:FourthScreenCell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath) as! FourthScreenCell
         
         let strTitle : NSString=(arrDict[indexPath.row] as AnyObject).value(forKey: "TITLE") as! NSString
         
@@ -92,11 +88,12 @@ class loaddata_json: UITableViewController {
         
         let time : NSString = (arrDict[indexPath.row] as AnyObject).value(forKey: "TIME") as! NSString
         
-//        cell.lblCell.text=strTitle as String
-//        cell.lblCell1.text=strDescription as String
-//        cell.lblCell2.text=time as String
-        cell.lbl1.text = strTitle as String
-        cell.lbl2.text = strDescription as String
+        cell.lblCell.text=strTitle as String
+        cell.lblCell1.text=strDescription as String
+        cell.lblCell2.text=time as String
+        
+//        cell.lbl1.text = strTitle as String
+//        cell.lbl2.text = strDescription as String
         
         return cell
     }
