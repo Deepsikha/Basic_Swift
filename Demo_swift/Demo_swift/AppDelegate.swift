@@ -13,13 +13,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
     var window: UIWindow?
     var navController: UINavigationController?
-    var viewController: ViewController?
+    var viewController = animation()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         navController = UINavigationController()
-        viewController = ViewController()
-        navController?.pushViewController(viewController!, animated: true)
+//        viewController = TabViewController()
+        navController?.pushViewController(viewController, animated: true)
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window!.rootViewController = navController
@@ -49,5 +49,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
 }
 
