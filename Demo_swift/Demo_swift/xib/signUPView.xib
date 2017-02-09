@@ -15,7 +15,6 @@
                 <outlet property="lastname" destination="ze4-Oh-2hT" id="rgU-yy-xgn"/>
                 <outlet property="pwd" destination="8r6-8D-wvb" id="o3s-Ac-by7"/>
                 <outlet property="pwd1" destination="Mrp-8s-mpo" id="nAZ-Gl-SCN"/>
-                <outlet property="su" destination="Mvf-UE-DW2" id="A9r-n3-tyO"/>
                 <outlet property="username" destination="fjg-vr-LRs" id="gdD-a3-M97"/>
                 <outlet property="view" destination="iN0-l3-epB" id="j3l-nO-pZY"/>
             </connections>
@@ -32,13 +31,6 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SIGN UP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mvf-UE-DW2">
-                    <rect key="frame" x="148" y="55" width="127" height="30"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fjg-vr-LRs">
                     <rect key="frame" x="16" y="190" width="288" height="30"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -99,7 +91,10 @@
                     <rect key="frame" x="16" y="391" width="288" height="30"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <state key="normal" title="Sign Up" backgroundImage="Image-1"/>
+                    <state key="normal" title="SUBMIT" backgroundImage="Image-1"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="SUBMIT.layer.cornerRadius" value="9"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="signUPAction:" destination="-1" eventType="touchUpInside" id="a0K-MY-fTk"/>
                     </connections>

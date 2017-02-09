@@ -3,7 +3,7 @@
 //  Demo_swift
 //
 //  Created by devloper65 on 1/25/17.
-//  Copyright © 2017 LaNet. /Users/itilak/Desktop/Basic_Swift/Demo_swift/Demo_swift/ViewController/SecondViewController.swiftAll rights reserved.
+//  Copyright © 2017 LaNet All rights reserved.
 //
 
 import UIKit
@@ -20,15 +20,16 @@ class ViewController: UIViewController,UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "FirstVC"
+        self.title = "LOG IN"
         self.navigationController?.navigationBar.isHidden = true
         label.font = label.font.withSize(20)
 //        Forward.frame = CGRectMake(100, 100, 50, 50)
         //MyTableView.frame = CGRectMake(20, 50, 250, 400)
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = true
         //self.navigationController?.navigationBar.isHidden = false
         // 3. Before displaying the value check if it contains data
         print("nthg")
@@ -43,7 +44,7 @@ class ViewController: UIViewController,UITextFieldDelegate {
             self.present(alt, animated: true, completion: nil)
         }
 
-        if pw == "makein" {
+        if pw == "makein" ||  pw == "lanetteam1" {
         let vc = SecondViewController(nibName:"secondView", bundle: nil)
         self.navigationController?.pushViewController(vc, animated: true)
         }else{

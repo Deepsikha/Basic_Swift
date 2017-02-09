@@ -18,11 +18,15 @@ class SecondViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     
         override func viewDidLoad() {
         super.viewDidLoad()
-    
+            self.navigationController?.navigationBar.isHidden = false
             nameTEextField.delegate = self
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+
+    }
     //MARK: Actions
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

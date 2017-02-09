@@ -25,7 +25,8 @@ class SignUPViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.navigationController?.navigationBar.isHidden = false
+        self.title = "SIGN UP"
+        self.navigationController?.navigationBar.isHidden = false
 //          su.font = su.font.withSize(50)
         // Do any additional setup after loading the view.
     }

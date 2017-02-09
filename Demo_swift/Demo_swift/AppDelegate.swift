@@ -13,12 +13,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
     var window: UIWindow?
     var navController: UINavigationController?
-    var viewController: loaddata_json?
+    var viewController: ViewController?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         navController = UINavigationController()
-        viewController = loaddata_json()
+        viewController = ViewController()
         navController?.pushViewController(viewController!, animated: true)
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
