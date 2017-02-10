@@ -13,7 +13,7 @@ class ThirdViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet var tableViewController: UITableView!
     @IBOutlet var textData: UITextField!
     
-    var tableData = ["a"]
+    var tableData = ["Try It..."]
     override func viewDidLoad() {
         super.viewDidLoad()
 

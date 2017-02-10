@@ -101,7 +101,6 @@
 		7D5E64031E40613D00E04121 /* FourthScreenCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FourthScreenCell.xib; sourceTree = "<group>"; };
 		7D5E64081E4070FD00E04121 /* TableHeaderFooterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableHeaderFooterViewController.swift; sourceTree = "<group>"; };
 		7D5E64091E4070FD00E04121 /* TableHeaderFooterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TableHeaderFooterViewController.xib; path = ../ViewController/TableHeaderFooterViewController.xib; sourceTree = "<group>"; };
-		7D5EB1721E4C5F9B008E44B1 /* Demo_swift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = Demo_swift.entitlements; path = Demo_swift/Demo_swift.entitlements; sourceTree = "<group>"; };
 		7D61C61C1E44A0840021C038 /* acce_controllerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = acce_controllerTableViewController.swift; sourceTree = "<group>"; };
 		7D627D1A1E4AD6CE001AE311 /* Demo_Scroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Demo_Scroll.swift; sourceTree = "<group>"; };
 		7D627D1B1E4AD6CE001AE311 /* Demo_Scroll.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Demo_Scroll.xib; path = ../ViewController/Demo_Scroll.xib; sourceTree = "<group>"; };
@@ -179,7 +178,6 @@
 		7D4AE0401E38ABCB00F1DED1 = {
 			isa = PBXGroup;
 			children = (
-				7D5EB1721E4C5F9B008E44B1 /* Demo_swift.entitlements */,
 				7D4AE04B1E38ABCC00F1DED1 /* Demo_swift */,
 				7D4AE0601E38ABCC00F1DED1 /* Demo_swiftTests */,
 				7D4AE06B1E38ABCC00F1DED1 /* Demo_swiftUITests */,
@@ -391,6 +389,7 @@
 				TargetAttributes = {
 					7D4AE0481E38ABCB00F1DED1 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = Y55EBSG532;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
@@ -710,7 +709,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -760,7 +760,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -788,11 +789,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = Y55EBSG532;
 				INFOPLIST_FILE = Demo_swift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lanet.Demo-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9b4db65e-affc-4641-a28e-01167fbfcb34";
+				PROVISIONING_PROFILE_SPECIFIER = DemoSwift;
 				SWIFT_OBJC_BRIDGING_HEADER = "Demo_swift/custom cell/Demo_swift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -805,11 +808,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
+				DEVELOPMENT_TEAM = Y55EBSG532;
 				INFOPLIST_FILE = Demo_swift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lanet.Demo-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9b4db65e-affc-4641-a28e-01167fbfcb34";
+				PROVISIONING_PROFILE_SPECIFIER = DemoSwift;
 				SWIFT_OBJC_BRIDGING_HEADER = "Demo_swift/custom cell/Demo_swift-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};

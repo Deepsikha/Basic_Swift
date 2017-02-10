@@ -16,7 +16,7 @@
                 <outlet property="email" destination="a2i-68-TpD" id="fWD-3f-1Nu"/>
                 <outlet property="label" destination="F4e-Zl-ee9" id="8bn-u6-fuc"/>
                 <outlet property="pwd" destination="97N-vw-aJx" id="B4V-4V-7jx"/>
-                <outlet property="submit" destination="RWO-3U-t4Q" id="IB1-Id-fje"/>
+                <outlet property="submit" destination="T5B-Pq-XNB" id="u33-bK-mve"/>
                 <outlet property="view" destination="iN0-l3-epB" id="k2d-Mu-yeT"/>
             </connections>
         </placeholder>
@@ -45,19 +45,6 @@
                         <outlet property="delegate" destination="-1" id="WIa-tU-7Hx"/>
                     </connections>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="RWO-3U-t4Q">
-                    <rect key="frame" x="17" y="275" width="382" height="21"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Submit" backgroundImage="Image-1">
-                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </state>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <action selector="ForwardAction:" destination="-1" eventType="touchUpInside" id="CN1-h6-M6Q"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="roZ-3W-COr">
                     <rect key="frame" x="104" y="318" width="207" height="30"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -73,13 +60,23 @@
                     <nil key="highlightedColor"/>
                     <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="T5B-Pq-XNB">
+                    <rect key="frame" x="17" y="275" width="382" height="21"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Submit" backgroundImage="back_login.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="ForwardAction:" destination="-1" eventType="touchUpInside" id="ij3-me-YGT"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
             <point key="canvasLocation" x="32" y="100"/>
         </view>
     </objects>
     <resources>
-        <image name="Image-1" width="58" height="58"/>
+        <image name="back_login.png" width="117" height="117"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
