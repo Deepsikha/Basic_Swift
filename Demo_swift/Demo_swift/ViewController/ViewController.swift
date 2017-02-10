@@ -18,11 +18,13 @@ class ViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet var pwd: UITextField!
     @IBOutlet var submit: UIButton!
     
+    @IBOutlet var NewAcc: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "LOG IN"
         self.navigationController?.navigationBar.isHidden = true
         label.font = label.font.withSize(20)
+        submit.layer.cornerRadius = 8
 //        Forward.frame = CGRectMake(100, 100, 50, 50)
         //MyTableView.frame = CGRectMake(20, 50, 250, 400)
     }
@@ -32,7 +34,24 @@ class ViewController: UIViewController,UITextFieldDelegate {
         self.navigationController?.navigationBar.isHidden = true
         //self.navigationController?.navigationBar.isHidden = false
         // 3. Before displaying the value check if it contains data
-        print("nthg")
+        label.center.y -= view.bounds.width
+        email.center.x -= view.bounds.width
+        pwd.center.x += view.bounds.width
+        
+        UIView.animate(withDuration: 2.0, delay: 0.5, animations: {self.label.center.y += self.view.bounds.width
+            self.view.layoutIfNeeded()
+
+        })
+    
+        UIView.animate(withDuration: 1.5, delay: 0.5, usingSpringWithDamping: 0.3, initialSpringVelocity: 0.5, options: [], animations: {
+            self.email.center.x += self.view.bounds.width
+            self.pwd.center.x -= self.view.bounds.width
+            self.submit.alpha = 0.5
+            self.NewAcc.alpha = 0.8
+        }, completion: nil)
+    
+        UIView.animate(withDuration: 3.0, delay: 2.0, options: [], animations: {self.submit.alpha = 1.0
+        }, completion: nil)
     }
     
     @IBAction func ForwardAction(_ sender: UIButton) {
@@ -58,6 +77,12 @@ class ViewController: UIViewController,UITextFieldDelegate {
     @IBAction func signUPAction(_ sender: UIButton) {
         let vc = SignUPViewController(nibName: "SignUPView", bundle: nil)
         self.navigationController?.pushViewController(vc, animated: true)
+        
+        UIView.animate(withDuration: 1.5, delay: 0.0, usingSpringWithDamping: 0.2, initialSpringVelocity: 10.0, options: [], animations: {
+            self.submit.bounds = CGRect(x: UIScreen.main.bounds.origin.x - 20, y: UIScreen.main.bounds.origin.y, width: UIScreen.main.bounds.size.width + 60, height: UIScreen.main.bounds.size.height)
+            self.submit.isEnabled = false
+        }, completion: nil)
+        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
