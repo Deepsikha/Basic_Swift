@@ -42,6 +42,10 @@
 		7D6E0AA11E41B9F100B0B38C /* blank-clock-face-hour-minute-second-hands-isolated-white-background-just-set-your-own-time-38762402.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7D6E0A9D1E41B9F100B0B38C /* blank-clock-face-hour-minute-second-hands-isolated-white-background-just-set-your-own-time-38762402.jpg */; };
 		7D6E0AA41E41BB5D00B0B38C /* days.json in Resources */ = {isa = PBXBuildFile; fileRef = 7D6E0AA31E41BB5D00B0B38C /* days.json */; };
 		7D75255C1E45E05F000D73F3 /* acce_controllerTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D75255B1E45E05F000D73F3 /* acce_controllerTableViewController.xib */; };
+		7DB6DFE81E4C2F9800156993 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB6DFE61E4C2F9800156993 /* TabViewController.swift */; };
+		7DB6DFE91E4C2F9800156993 /* TabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DB6DFE71E4C2F9800156993 /* TabViewController.xib */; };
+		7DB6DFEC1E4C3CD700156993 /* animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB6DFEA1E4C3CD700156993 /* animation.swift */; };
+		7DB6DFED1E4C3CD700156993 /* animation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DB6DFEB1E4C3CD700156993 /* animation.xib */; };
 		97E7E52C30D856C797F73DA1 /* Pods_Demo_swiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12E5B6BA7309958E388BFDF5 /* Pods_Demo_swiftUITests.framework */; };
 		B2C0802BB993DA65FF5C2FE3 /* Pods_Demo_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB3E612F086C7942A055EE4 /* Pods_Demo_swift.framework */; };
 		C5B25F3CBE954754528F0CFD /* Pods_Demo_swiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B662FA95367487BB68EC698 /* Pods_Demo_swiftTests.framework */; };
@@ -97,6 +101,7 @@
 		7D5E64031E40613D00E04121 /* FourthScreenCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FourthScreenCell.xib; sourceTree = "<group>"; };
 		7D5E64081E4070FD00E04121 /* TableHeaderFooterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableHeaderFooterViewController.swift; sourceTree = "<group>"; };
 		7D5E64091E4070FD00E04121 /* TableHeaderFooterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TableHeaderFooterViewController.xib; path = ../ViewController/TableHeaderFooterViewController.xib; sourceTree = "<group>"; };
+		7D5EB1721E4C5F9B008E44B1 /* Demo_swift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Demo_swift.entitlements; sourceTree = "<group>"; };
 		7D61C61C1E44A0840021C038 /* acce_controllerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = acce_controllerTableViewController.swift; sourceTree = "<group>"; };
 		7D627D1A1E4AD6CE001AE311 /* Demo_Scroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Demo_Scroll.swift; sourceTree = "<group>"; };
 		7D627D1B1E4AD6CE001AE311 /* Demo_Scroll.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Demo_Scroll.xib; path = ../ViewController/Demo_Scroll.xib; sourceTree = "<group>"; };
@@ -111,6 +116,10 @@
 		7D6E0AA31E41BB5D00B0B38C /* days.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = days.json; sourceTree = "<group>"; };
 		7D75255B1E45E05F000D73F3 /* acce_controllerTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = acce_controllerTableViewController.xib; sourceTree = "<group>"; };
 		7DB458A51E433A9B00ED3447 /* Demo_swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Demo_swift-Bridging-Header.h"; path = "custom cell/Demo_swift-Bridging-Header.h"; sourceTree = "<group>"; };
+		7DB6DFE61E4C2F9800156993 /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		7DB6DFE71E4C2F9800156993 /* TabViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TabViewController.xib; path = ../ViewController/TabViewController.xib; sourceTree = "<group>"; };
+		7DB6DFEA1E4C3CD700156993 /* animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = animation.swift; sourceTree = "<group>"; };
+		7DB6DFEB1E4C3CD700156993 /* animation.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = animation.xib; path = ../ViewController/animation.xib; sourceTree = "<group>"; };
 		A9B133978D7F81598A909352 /* Pods-Demo_swiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo_swiftUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Demo_swiftUITests/Pods-Demo_swiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E8AC384B0071178EC0D3CC7C /* Pods-Demo_swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo_swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Demo_swift/Pods-Demo_swift.debug.xcconfig"; sourceTree = "<group>"; };
 		EDB3E612F086C7942A055EE4 /* Pods_Demo_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Demo_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -192,6 +201,7 @@
 		7D4AE04B1E38ABCC00F1DED1 /* Demo_swift */ = {
 			isa = PBXGroup;
 			children = (
+				7D5EB1721E4C5F9B008E44B1 /* Demo_swift.entitlements */,
 				7D4AE04C1E38ABCC00F1DED1 /* AppDelegate.swift */,
 				7D2EFCF11E3B2F70005F5BC0 /* RatingController.swift */,
 				7D0B70081E3F3CAC006EAD93 /* custom cell */,
@@ -231,6 +241,8 @@
 			children = (
 				7D4AE0891E38BCF900F1DED1 /* ViewController.swift */,
 				7D23BEF51E3C93F1009FDDAD /* SignUPViewController.swift */,
+				7DB6DFE61E4C2F9800156993 /* TabViewController.swift */,
+				7DB6DFEA1E4C3CD700156993 /* animation.swift */,
 				7D61C61C1E44A0840021C038 /* acce_controllerTableViewController.swift */,
 				7D23BEE91E3C6963009FDDAD /* fourthViewController.swift */,
 				7D4AE0981E38C7C700F1DED1 /* ThirdViewController.swift */,
@@ -246,7 +258,9 @@
 		7D4AE08A1E38BCF900F1DED1 /* xib */ = {
 			isa = PBXGroup;
 			children = (
+				7DB6DFE71E4C2F9800156993 /* TabViewController.xib */,
 				7D4AE08B1E38BCF900F1DED1 /* secondView.xib */,
+				7DB6DFEB1E4C3CD700156993 /* animation.xib */,
 				7D627D1B1E4AD6CE001AE311 /* Demo_Scroll.xib */,
 				7D5E64091E4070FD00E04121 /* TableHeaderFooterViewController.xib */,
 				7D627D271E4AE83E001AE311 /* btnController.xib */,
@@ -378,7 +392,12 @@
 					7D4AE0481E38ABCB00F1DED1 = {
 						CreatedOnToolsVersion = 8.2.1;
 						LastSwiftMigration = 0820;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
 					};
 					7D4AE05C1E38ABCC00F1DED1 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -417,6 +436,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DB6DFE91E4C2F9800156993 /* TabViewController.xib in Resources */,
 				7D4AE0571E38ABCC00F1DED1 /* LaunchScreen.storyboard in Resources */,
 				7D4AE0911E38BCF900F1DED1 /* View.xib in Resources */,
 				7D627D251E4AE54A001AE311 /* btnCell.xib in Resources */,
@@ -430,6 +450,7 @@
 				7D627D291E4AE83E001AE311 /* btnController.xib in Resources */,
 				7D4AE0901E38BCF900F1DED1 /* secondView.xib in Resources */,
 				7D4AE0971E38C7A700F1DED1 /* thirdView.xib in Resources */,
+				7DB6DFED1E4C3CD700156993 /* animation.xib in Resources */,
 				7D5E64051E40613D00E04121 /* FourthScreenCell.xib in Resources */,
 				7D23BEF81E3C9400009FDDAD /* SignUPView.xib in Resources */,
 				7D75255C1E45E05F000D73F3 /* acce_controllerTableViewController.xib in Resources */,
@@ -598,6 +619,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D5E640A1E4070FD00E04121 /* TableHeaderFooterViewController.swift in Sources */,
+				7DB6DFEC1E4C3CD700156993 /* animation.swift in Sources */,
 				7D6E0A951E41B1D700B0B38C /* loaddata_json.swift in Sources */,
 				7D627D241E4AE54A001AE311 /* btnCell.swift in Sources */,
 				7D4AE08D1E38BCF900F1DED1 /* SecondViewController.swift in Sources */,
@@ -605,6 +627,7 @@
 				7D5E64041E40613D00E04121 /* FourthScreenCell.swift in Sources */,
 				7D23BEF61E3C93F1009FDDAD /* SignUPViewController.swift in Sources */,
 				7D2EFCFA1E3B68DD005F5BC0 /* demo_rt.swift in Sources */,
+				7DB6DFE81E4C2F9800156993 /* TabViewController.swift in Sources */,
 				7D2EFCF21E3B2F70005F5BC0 /* RatingController.swift in Sources */,
 				7D23BEEA1E3C6963009FDDAD /* fourthViewController.swift in Sources */,
 				7D4AE08F1E38BCF900F1DED1 /* ViewController.swift in Sources */,
@@ -765,6 +788,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Demo_swift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "lanet.Demo-swift";
@@ -781,6 +805,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Demo_swift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "lanet.Demo-swift";
