@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 protocol MyProtocol {
     func passvalue(valueSent:String?)
@@ -21,6 +22,17 @@ class SignUPViewController: UIViewController {
     @IBOutlet var pwd1: UITextField!
     @IBOutlet var su: UILabel!
     
+    var persistentContainer: NSPersistentContainer = {
+        
+        let container = NSPersistentContainer(name: "LogIn")
+        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+            if let error = error {
+                
+                fatalError("Unresolved error \(error)")
+            }
+        })
+        return container
+    }()
     var delegate:MyProtocol?
     
     override func viewDidLoad() {
@@ -53,7 +65,46 @@ class SignUPViewController: UIViewController {
         }
         let pd = pwd.text
         delegate?.passvalue(valueSent: pd)
+        self.save(username: username.text!, pwd: pwd.text!)
     }
+
+        //store data using CoreData
+//        let managedContext = persistentContainer.viewContext
+//        let entity = NSEntityDescription.entity(forEntityName: "LogIn", in: managedContext)!
+//        let person = NSManagedObject(entity: entity, insertInto: managedContext)
+//        
+//         person.setValue(username.text, forKey: "username")
+//         person.setValue(pwd.text, forKey: "pwd")
+//        
+//         do {
+//         try managedContext.save()
+//         } catch {}
+//         
+//         print(person)
+//         print("Object Saved.")
+    func save(username: String, pwd: String) {
+            //1
+            let managedContext = persistentContainer.viewContext
+            
+            // 2
+            let entity =
+                NSEntityDescription.entity(forEntityName: "LogIn",
+                                           in: managedContext)!
+            
+            let person = NSManagedObject(entity: entity,
+                                         insertInto: managedContext)
+            
+            // 3
+            person.setValue(username, forKey: "username")
+        person.setValue(pwd, forKey: "pwd")
+        
+            // 4
+            do {
+                try managedContext.save()
+            } catch let error as NSError {
+                print("Could not save. \(error), \(error.userInfo)")
+            }
+        }
     
       /*
     // MARK: - Navigation

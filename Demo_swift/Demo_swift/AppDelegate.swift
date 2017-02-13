@@ -18,7 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         navController = UINavigationController()
-//        viewController = TabViewController()
         navController?.pushViewController(viewController, animated: true)
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
