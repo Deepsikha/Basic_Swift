@@ -23,6 +23,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = true
+        self.navigationController?.hidesBarsOnSwipe = true
     }
     
     //MARK: Delegate Method(TextField)

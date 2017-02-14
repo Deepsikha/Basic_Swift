@@ -45,7 +45,7 @@ class ViewController: UIViewController,UITextFieldDelegate {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = true
     
-        //MARK: - Animation
+        // Animation
         label.center.y -= view.bounds.width
         email.center.x -= view.bounds.width
         pwd.center.x += view.bounds.width
