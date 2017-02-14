@@ -122,6 +122,9 @@ class fourthViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBAction func reverse(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
+    @IBAction func Logout(_ sender: UIButton) {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
     func updateSearchResults(for searchController: UISearchController) {
     
         filteredTableData.removeAll(keepingCapacity: false)

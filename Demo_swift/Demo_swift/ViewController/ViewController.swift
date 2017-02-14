@@ -79,28 +79,28 @@ class ViewController: UIViewController,UITextFieldDelegate {
             self.present(alt, animated: true, completion: nil)
         }
         // Login verification static
-//        if pw == "makein" ||  pw == "lanetteam1" {
-//        let vc = SecondViewController(nibName:"secondView", bundle: nil)
-//        self.navigationController?.pushViewController(vc, animated: true)
-//        }else{
-//            let alt = UIAlertController(title: "", message: "Wrong Password", preferredStyle: UIAlertControllerStyle.alert)
-//            alt.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
-//            self.present(alt, animated: true, completion: nil)
-//        }
-
-        // Log in Verification using CoreData
-        _ = persistentContainer.viewContext
-        let userEmailStored = UserDefaults.standard.string(forKey: "username")
-        let passwordstored = UserDefaults.standard.string(forKey: "pwd")
-        
-        if pw == passwordstored && name == userEmailStored {
-            let vc = SecondViewController(nibName:"secondView", bundle: nil)
-            self.navigationController?.pushViewController(vc, animated: true)
+        if pw == "makein" ||  pw == "lanetteam1" {
+        let vc = SecondViewController(nibName:"secondView", bundle: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
         }else{
             let alt = UIAlertController(title: "", message: "Wrong Password", preferredStyle: UIAlertControllerStyle.alert)
             alt.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
             self.present(alt, animated: true, completion: nil)
         }
+
+        // Log in Verification using CoreData
+//        _ = persistentContainer.viewContext
+//        let userEmailStored = UserDefaults.standard.string(forKey: "username")
+//        let passwordstored = UserDefaults.standard.string(forKey: "pwd")
+//        
+//        if pw == passwordstored && name == userEmailStored {
+//            let vc = SecondViewController(nibName:"secondView", bundle: nil)
+//            self.navigationController?.pushViewController(vc, animated: true)
+//        }else{
+//            let alt = UIAlertController(title: "", message: "Wrong Password", preferredStyle: UIAlertControllerStyle.alert)
+//            alt.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+//            self.present(alt, animated: true, completion: nil)
+//        }
     }
  
     @IBAction func signUPAction(_ sender: UIButton) {

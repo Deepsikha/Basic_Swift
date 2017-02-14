@@ -89,6 +89,9 @@ class SecondViewController: UIViewController, UITextFieldDelegate, UIImagePicker
 //        let bc = ViewController(nibName: "view", bundle: nil)
         self.navigationController?.popViewController(animated: true)
     }
+    @IBAction func Logout(_ sender: UIButton) {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
