@@ -26,10 +26,12 @@ class webView: UIViewController, UIWebViewDelegate {
         view.addSubview(webView)
     }
     
+    // MARK: - Delegate Method
     func webViewDidFinishLoad(_ webView: UIWebView){
         self.Activity.stopAnimating()
     }
     
+    //MARK: - Button Action
     @IBAction func BackAciton(_ sender: UIButton) {
         if webView.canGoBack {
             webView.goBack()
@@ -49,17 +51,6 @@ class webView: UIViewController, UIWebViewDelegate {
     
     @IBAction func Stop(_ sender: UIBarButtonItem) {
         webView.stopLoading()
-
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

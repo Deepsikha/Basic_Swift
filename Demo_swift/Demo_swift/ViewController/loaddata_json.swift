@@ -13,6 +13,7 @@ class loaddata_json: UITableViewController {
     var arrDict :NSMutableArray=[]
     var cellReuseIdentifier = "FourthScreenCell"
     var strTitle:NSString = ""
+    
     @IBOutlet var TableViewJson: UITableView!
     
     override func viewDidLoad() {
@@ -24,12 +25,6 @@ class loaddata_json: UITableViewController {
 //         self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         self.parsingdata()
-    }
-
-  
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     func parsingdata() {
@@ -60,8 +55,7 @@ class loaddata_json: UITableViewController {
         TableViewJson .reloadData()
     }
     
-        // MARK: - Table view data source
-
+    // MARK: - Delegate Method
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -123,23 +117,23 @@ class loaddata_json: UITableViewController {
         return cell
      }
         */
-    
-//    override func tableView(_ tableView: UITableView, editActionsForRowAt: IndexPath) -> [UITableViewRowAction]? {
-//        
-//        // edit action using by default property
-//        let Edit = UITableViewRowAction(style: .normal, title: "Edit") { action, index in
-//            print("Edit button tapped")
-//        }
-//        Edit.backgroundColor = .lightGray
-//        
-//        let Delete = UITableViewRowAction(style: .normal, title: "Delete") { action, index in
-//            print("Delete button tapped")
-//        }
-//        Delete.backgroundColor = .red
-//        
-//        return [Delete, Edit]
-//    }
-//    
+    /* Right Button
+    override func tableView(_ tableView: UITableView, editActionsForRowAt: IndexPath) -> [UITableViewRowAction]? {
+        
+        // edit action using by default property
+        let Edit = UITableViewRowAction(style: .normal, title: "Edit") { action, index in
+            print("Edit button tapped")
+        }
+        Edit.backgroundColor = .lightGray
+        
+        let Delete = UITableViewRowAction(style: .normal, title: "Delete") { action, index in
+            print("Delete button tapped")
+        }
+        Delete.backgroundColor = .red
+        
+        return [Delete, Edit]
+    }
+    */
     override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         
     }
@@ -157,7 +151,8 @@ class loaddata_json: UITableViewController {
     override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
         return "NEXT"
     }
-    /* Function for Write Data into File.
+    //MARK: - Write Data into File
+    /*   Function for Write Data into File.
     func wrt(json: AnyObject){
         print("ABCD")
         do {
@@ -185,16 +180,6 @@ class loaddata_json: UITableViewController {
         catch{
             print("Error")
         }
-    }
-    */
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
     */
 }
