@@ -63,7 +63,7 @@
                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="T5B-Pq-XNB">
                     <rect key="frame" x="17" y="275" width="382" height="21"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Submit" backgroundImage="back_login.png">
+                    <state key="normal" title="Submit" backgroundImage="Image-1">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -76,7 +76,7 @@
         </view>
     </objects>
     <resources>
-        <image name="back_login.png" width="117" height="117"/>
+        <image name="Image-1" width="58" height="58"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
