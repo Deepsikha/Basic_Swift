@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="1lB-Pt-Eq5">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="I7l-nv-xIT">
+            <objects>
+                <viewController id="N7Z-hL-sdN" customClass="ViewController" customModule="Web_Browser" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lQ7-XX-whE"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Ty-au-6aV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5em-uE-BVF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ofA-VC-aBG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ihn-UD-lLb">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ihn-UD-lLb" firstAttribute="centerY" secondItem="5em-uE-BVF" secondAttribute="centerY" id="2mq-QW-ApA"/>
+                            <constraint firstItem="ofA-VC-aBG" firstAttribute="leading" secondItem="5em-uE-BVF" secondAttribute="leading" id="8e3-sA-bnL"/>
+                            <constraint firstItem="ihn-UD-lLb" firstAttribute="centerX" secondItem="5em-uE-BVF" secondAttribute="centerX" id="Pw5-E9-ITi"/>
+                            <constraint firstItem="8Ty-au-6aV" firstAttribute="top" secondItem="ofA-VC-aBG" secondAttribute="bottom" id="fRQ-Xz-QD2"/>
+                            <constraint firstAttribute="trailing" secondItem="ofA-VC-aBG" secondAttribute="trailing" id="hHq-Sw-CLE"/>
+                            <constraint firstItem="ofA-VC-aBG" firstAttribute="top" secondItem="5em-uE-BVF" secondAttribute="top" id="w52-e0-3L8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="c0Q-qq-PNL">
+                        <nil key="title"/>
+                        <leftBarButtonItems>
+                            <barButtonItem title="&lt;" style="done" id="ncz-dm-zng">
+                                <connections>
+                                    <action selector="backAction:" destination="N7Z-hL-sdN" id="Uv3-dh-d38"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="&gt;" style="done" id="PJN-YC-fVc">
+                                <connections>
+                                    <action selector="forwardAction:" destination="N7Z-hL-sdN" id="9pu-Uz-o4m"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
+                        <textField key="titleView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Enter URL" minimumFontSize="17" id="uZg-dj-PA2">
+                            <rect key="frame" x="86" y="7" width="199" height="30"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <attributedString key="attributedText"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="N7Z-hL-sdN" id="hoY-RX-WNm"/>
+                            </connections>
+                        </textField>
+                        <rightBarButtonItems>
+                            <barButtonItem style="done" systemItem="refresh" id="olq-gc-FpI">
+                                <connections>
+                                    <action selector="refreshButtonAction:" destination="N7Z-hL-sdN" id="wNO-Sk-IIC"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem style="done" systemItem="stop" id="mNN-0H-TEh">
+                                <connections>
+                                    <action selector="stopAction:" destination="N7Z-hL-sdN" id="8Ff-gI-oA5"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mySpinner" destination="ihn-UD-lLb" id="1fS-lL-keO"/>
+                        <outlet property="myWebView" destination="ofA-VC-aBG" id="ebc-L3-Cf9"/>
+                        <outlet property="urlsearchbar" destination="uZg-dj-PA2" id="chd-bE-1Cu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LZl-iD-nsg" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1730.4000000000001" y="364.7676161919041"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qmI-Nm-5sJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1lB-Pt-Eq5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HyI-Sh-0Gd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="N7Z-hL-sdN" kind="relationship" relationship="rootViewController" id="qdW-aS-g0w"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7dq-nc-itq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="816" y="366"/>
+        </scene>
+    </scenes>
+</document>
