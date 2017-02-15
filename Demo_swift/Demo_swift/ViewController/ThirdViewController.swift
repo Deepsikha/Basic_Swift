@@ -14,16 +14,16 @@ class ThirdViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet var textData: UITextField!
     
     var tableData = ["Try It..."]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         animateTable()
     }
     
+    //MARK: - Animation
     func animateTable() {
         tableViewController.reloadData()
         
@@ -47,6 +47,7 @@ class ThirdViewController: UIViewController, UITableViewDataSource, UITableViewD
         }
     }
     
+    //MARK: - Button Action
     @IBAction func reverseAction(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
@@ -63,11 +64,13 @@ class ThirdViewController: UIViewController, UITableViewDataSource, UITableViewD
         
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func addData(_ sender: UIButton) {
+        tableData.append(textData.text!)
+        //textData.resignFirstResponder()
+        tableViewController.reloadData()
     }
     
+    //MARK: - Delegate Method
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableData.count
     }
@@ -80,20 +83,4 @@ class ThirdViewController: UIViewController, UITableViewDataSource, UITableViewD
         return cell
     }
     
-    @IBAction func addData(_ sender: UIButton) {
-        tableData.append(textData.text!)
-        //textData.resignFirstResponder()
-        tableViewController.reloadData()
-    }   
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

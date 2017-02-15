@@ -11,9 +11,7 @@ import CoreData
 
 class CoreDataViewController: UIViewController,UITableViewDataSource {
     
-    @IBOutlet var core_data: UITableView!
     var people: [NSManagedObject] = []
-    
     var persistentContainer: NSPersistentContainer = {
         
         let container = NSPersistentContainer(name: "LogIn")
@@ -25,6 +23,8 @@ class CoreDataViewController: UIViewController,UITableViewDataSource {
         })
         return container
     }()
+    
+    @IBOutlet var core_data: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +48,7 @@ class CoreDataViewController: UIViewController,UITableViewDataSource {
         }
     }
     
+    //MARK: - Delegate Method
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.people.count
     }
@@ -59,6 +60,7 @@ class CoreDataViewController: UIViewController,UITableViewDataSource {
         return cell
     }
     
+    //MARK: - Button Action
     @IBAction func AddDataAction(_ sender: UIButton) {
         
         let alert = UIAlertController(title: "New Name",
@@ -111,14 +113,5 @@ class CoreDataViewController: UIViewController,UITableViewDataSource {
             print("Could not save. \(error), \(error.userInfo)")
         }
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

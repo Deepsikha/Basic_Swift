@@ -10,22 +10,14 @@ import UIKit
 
 class fourthViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating {
 
-   
     var table1Data = ["a"]
-    @IBOutlet var tableView1: UITableView!
-
-    // These strings will be the data for the table view cells
     let animals: [String] = ["Horse", "Cow", "Camel", "Sheep", "Goat"]
-    
-    // These are the colors of the square views in our table view cells.
-    // In a real project you might use UIImages.
     let colors = [UIColor.blue, UIColor.yellow, UIColor.magenta, UIColor.red, UIColor.brown]
-    
-    // Don't forget to enter this in IB also
     let cellReuseIdentifier = "FourthScreenCell"
     
     var filteredTableData = [String]()
     var resultSearchController = UISearchController()
+    @IBOutlet var tableView1: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,8 +32,6 @@ class fourthViewController: UIViewController, UITableViewDelegate, UITableViewDa
             
             return controller
         })()
-        
-        // Reload the table
         self.tableView1.reloadData()
     }
 
@@ -73,7 +63,7 @@ class fourthViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
     }
     
-    //delegate methods
+    // MARK: - Delegate Methods
    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -115,15 +105,8 @@ class fourthViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    @IBAction func reverse(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
-    }
     func updateSearchResults(for searchController: UISearchController) {
-    
+        
         filteredTableData.removeAll(keepingCapacity: false)
         
         let searchPredicate = NSPredicate(format: "SELF CONTAINS[c] %@", searchController.searchBar.text!)
@@ -133,17 +116,12 @@ class fourthViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.tableView1.reloadData()
     }
     
+    //MARK: - Button Action
+    @IBAction func reverse(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    @IBAction func Logout(_ sender: UIButton) {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
     
 }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-

@@ -11,9 +11,7 @@ import UIKit
 class SecondViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet var nameTEextField: UITextField!
-    
     @IBOutlet var mealNameLabel: UILabel!
-    
     @IBOutlet var photoImageView: UIImageView!
     
         override func viewDidLoad() {
@@ -25,10 +23,10 @@ class SecondViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = true
-
+        self.navigationController?.hidesBarsOnSwipe = true
     }
-    //MARK: Actions
     
+    //MARK: Delegate Method(TextField)
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
@@ -47,6 +45,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         return true
     }
     
+    //MARK: - Button Action
     @IBAction func setCustomLabelName(_ sender: UIButton) {
         
         mealNameLabel.text = "Default Text"
@@ -62,24 +61,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         present(imagePickerController, animated: true, completion: nil)
     
     }
-    
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        dismiss(animated: true, completion: nil)
-    }
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        
-    
-    guard let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage else {
-    fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
-        
-        }
-        photoImageView.image = selectedImage
-        
-        dismiss(animated: true, completion: nil)
-        
-    }
-        
+
     func forwardAction(_ sender: UIButton) {
                 let vc = ThirdViewController(nibName: "thirdView", bundle: nil)
         self.navigationController?.pushViewController(vc, animated: true)
@@ -89,20 +71,27 @@ class SecondViewController: UIViewController, UITextFieldDelegate, UIImagePicker
 //        let bc = ViewController(nibName: "view", bundle: nil)
         self.navigationController?.popViewController(animated: true)
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func Logout(_ sender: UIButton) {
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    //MARK: - Delegate Method(ImagePickerController)
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
     }
-    */
-
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        
+        guard let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage else {
+            fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
+            
+        }
+        photoImageView.image = selectedImage
+        
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
 }
