@@ -13,7 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
     var window: UIWindow?
     var navController: UINavigationController?
-    var viewController = ViewController()
+    var viewController = fifthViewController()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
