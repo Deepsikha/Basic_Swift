@@ -12,7 +12,8 @@ class SixViewController: UIViewController {
     var imagecount = 0
     var imagelist: [String] = ["i1.jpeg","i2.jpeg","i3.jpeg","i4.jpeg","i5.jpeg"]
     @IBOutlet var stack: UIStackView!
-    @IBOutlet var addImage: UIButton!
+    
+    @IBOutlet var Add: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,11 +22,11 @@ class SixViewController: UIViewController {
         
         self.addImageToStack()
     }
-
-    @IBAction func addImageAction(_ sender: UIButton) {
+    @IBAction func AddImageAction(_ sender: UIBarButtonItem) {
         self.addImageToStack()
+
     }
-    
+
     func addImageToStack() {
         let imagename = self.imagelist[self.imagecount]
         
@@ -38,7 +39,7 @@ class SixViewController: UIViewController {
         self.imagecount += 1
         
         if (imagecount > 5) {
-                self.addImage.isEnabled = true
+                self.Add.isEnabled = true
         }
     }
 

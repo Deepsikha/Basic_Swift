@@ -127,7 +127,6 @@
 		7D9179A81E51A12E00B094EC /* LogIn.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LogIn.xcdatamodel; sourceTree = "<group>"; };
 		7D9179B41E51CA8300B094EC /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Images; path = Resources/Images; sourceTree = "<group>"; };
 		7D9179B61E51CA9300B094EC /* JSON */ = {isa = PBXFileReference; lastKnownFileType = folder; name = JSON; path = Resources/JSON; sourceTree = "<group>"; };
-		7DB458A51E433A9B00ED3447 /* Demo_swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Demo_swift-Bridging-Header.h"; path = "custom cell/Demo_swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		7DB6DFE61E4C2F9800156993 /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		7DB6DFE71E4C2F9800156993 /* TabViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TabViewController.xib; path = ../ViewController/TabViewController.xib; sourceTree = "<group>"; };
 		7DB6DFEA1E4C3CD700156993 /* animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = animation.swift; sourceTree = "<group>"; };
@@ -204,7 +203,6 @@
 				7D2EFCF91E3B68DD005F5BC0 /* demo_rt.swift */,
 				7D4AE0501E38ABCC00F1DED1 /* Main.storyboard */,
 				7D4AE0531E38ABCC00F1DED1 /* Assets.xcassets */,
-				7DB458A51E433A9B00ED3447 /* Demo_swift-Bridging-Header.h */,
 				7D4AE0581E38ABCC00F1DED1 /* Info.plist */,
 			);
 			path = Demo_swift;
