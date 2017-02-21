@@ -42,6 +42,9 @@
 		7D653BF91E55C8A1008E9462 /* fifthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D653BF81E55C8A1008E9462 /* fifthViewController.xib */; };
 		7D653BFB1E55C8B2008E9462 /* SixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D653BFA1E55C8B2008E9462 /* SixViewController.swift */; };
 		7D653BFD1E55C8BA008E9462 /* SixViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D653BFC1E55C8BA008E9462 /* SixViewController.xib */; };
+		7D6CBE441E5BFD0E00435CB1 /* issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6CBE421E5BFD0E00435CB1 /* issue.swift */; };
+		7D6CBE451E5BFD0E00435CB1 /* issue.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D6CBE431E5BFD0E00435CB1 /* issue.xib */; };
+		7D6CBE471E5C04BF00435CB1 /* days.json in Resources */ = {isa = PBXBuildFile; fileRef = 7D6CBE461E5C04BF00435CB1 /* days.json */; };
 		7D6E0A951E41B1D700B0B38C /* loaddata_json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6E0A931E41B1D700B0B38C /* loaddata_json.swift */; };
 		7D6E0A961E41B1D700B0B38C /* loaddata_json.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D6E0A941E41B1D700B0B38C /* loaddata_json.xib */; };
 		7D75255C1E45E05F000D73F3 /* acce_controllerTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D75255B1E45E05F000D73F3 /* acce_controllerTableViewController.xib */; };
@@ -128,6 +131,9 @@
 		7D653BF81E55C8A1008E9462 /* fifthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = fifthViewController.xib; sourceTree = "<group>"; };
 		7D653BFA1E55C8B2008E9462 /* SixViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SixViewController.swift; sourceTree = "<group>"; };
 		7D653BFC1E55C8BA008E9462 /* SixViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SixViewController.xib; sourceTree = "<group>"; };
+		7D6CBE421E5BFD0E00435CB1 /* issue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = issue.swift; sourceTree = "<group>"; };
+		7D6CBE431E5BFD0E00435CB1 /* issue.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = issue.xib; sourceTree = "<group>"; };
+		7D6CBE461E5C04BF00435CB1 /* days.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = days.json; path = Demo_swift/Resources/JSON/days.json; sourceTree = SOURCE_ROOT; };
 		7D6E0A931E41B1D700B0B38C /* loaddata_json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loaddata_json.swift; sourceTree = "<group>"; };
 		7D6E0A941E41B1D700B0B38C /* loaddata_json.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = loaddata_json.xib; path = ../ViewController/loaddata_json.xib; sourceTree = "<group>"; };
 		7D75255B1E45E05F000D73F3 /* acce_controllerTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = acce_controllerTableViewController.xib; sourceTree = "<group>"; };
@@ -258,6 +264,8 @@
 			isa = PBXGroup;
 			children = (
 				7D4AE0891E38BCF900F1DED1 /* ViewController.swift */,
+				7D6CBE421E5BFD0E00435CB1 /* issue.swift */,
+				7D6CBE431E5BFD0E00435CB1 /* issue.xib */,
 				7D102C2C1E5B0DC700647741 /* ImagwCache.swift */,
 				7D102C2D1E5B0DC700647741 /* ImagwCache.xib */,
 				7D88C34B1E5853FE0070E8EE /* LazyLoadingController.swift */,
@@ -301,6 +309,7 @@
 				7D4AE08C1E38BCF900F1DED1 /* View.xib */,
 				7D813DC21E51759700136A14 /* CoreDataViewController.xib */,
 				7D4AE0961E38C7A700F1DED1 /* thirdView.xib */,
+				7D6CBE461E5C04BF00435CB1 /* days.json */,
 			);
 			path = xib;
 			sourceTree = "<group>";
@@ -441,6 +450,7 @@
 			files = (
 				7DB6DFE91E4C2F9800156993 /* TabViewController.xib in Resources */,
 				7D4AE0571E38ABCC00F1DED1 /* LaunchScreen.storyboard in Resources */,
+				7D6CBE471E5C04BF00435CB1 /* days.json in Resources */,
 				7D4AE0911E38BCF900F1DED1 /* View.xib in Resources */,
 				7D88C3421E581F4A0070E8EE /* images.png in Resources */,
 				7D627D251E4AE54A001AE311 /* btnCell.xib in Resources */,
@@ -455,6 +465,7 @@
 				7D653BFD1E55C8BA008E9462 /* SixViewController.xib in Resources */,
 				7D4AE0541E38ABCC00F1DED1 /* Assets.xcassets in Resources */,
 				7D9179B71E51CA9400B094EC /* JSON in Resources */,
+				7D6CBE451E5BFD0E00435CB1 /* issue.xib in Resources */,
 				7D7FAC8B1E52CF9E0063E4BD /* demo_web.xib in Resources */,
 				7D813DC41E51759700136A14 /* CoreDataViewController.xib in Resources */,
 				7D627D291E4AE83E001AE311 /* btnController.xib in Resources */,
@@ -499,6 +510,7 @@
 				7D88C33F1E580E3C0070E8EE /* TabViewController2.swift in Sources */,
 				7D6E0A951E41B1D700B0B38C /* loaddata_json.swift in Sources */,
 				7D627D241E4AE54A001AE311 /* btnCell.swift in Sources */,
+				7D6CBE441E5BFD0E00435CB1 /* issue.swift in Sources */,
 				7D4AE08D1E38BCF900F1DED1 /* SecondViewController.swift in Sources */,
 				7D627D1C1E4AD6CE001AE311 /* Demo_Scroll.swift in Sources */,
 				7D5E64041E40613D00E04121 /* FourthScreenCell.swift in Sources */,

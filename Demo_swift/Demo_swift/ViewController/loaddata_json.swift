@@ -22,7 +22,7 @@ class loaddata_json: UITableViewController {
        
         TableViewJson.register(UINib(nibName: "FourthScreenCell", bundle: nil), forCellReuseIdentifier: cellReuseIdentifier)
 //         self.clearsSelectionOnViewWillAppear = false
-//         self.navigationItem.rightBarButtonItem = self.editButtonItem
+         self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         self.parsingdata()
     }
