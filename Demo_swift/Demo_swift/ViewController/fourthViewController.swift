@@ -11,7 +11,7 @@ import UIKit
 class fourthViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating {
 
     var table1Data = ["a"]
-    let animals: [String] = ["Horse", "Cow", "Camel", "Sheep", "Goat"]
+    var animals: [String] = ["Horse", "Cow", "Camel", "Sheep", "Goat"]
     let colors = [UIColor.blue, UIColor.yellow, UIColor.magenta, UIColor.red, UIColor.brown]
     let cellReuseIdentifier = "FourthScreenCell"
     
@@ -21,6 +21,7 @@ class fourthViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
         tableView1.register(UINib(nibName: "FourthScreenCell", bundle: nil), forCellReuseIdentifier: cellReuseIdentifier)
         self.resultSearchController = ({
             let controller = UISearchController(searchResultsController: nil)
@@ -92,6 +93,17 @@ class fourthViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         return cell
         }
+    }
+    
+    
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let itemToMove:String = animals[sourceIndexPath.row]
+        animals.remove(at: sourceIndexPath.row)
+        animals.insert(itemToMove, at: sourceIndexPath.row)
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

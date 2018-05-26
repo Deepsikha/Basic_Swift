@@ -11,7 +11,6 @@ import UIKit
 class LazyLoadingController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet var LazyTable: UITableView!
     var tableData: Array < String > = Array < String >()
-    let animals: [String] = ["Horse", "Cow", "Camel", "Sheep", "Goat"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +18,7 @@ class LazyLoadingController: UIViewController, UITableViewDelegate, UITableViewD
         LazyTable.delegate = self
         LazyTable.dataSource = self
         LazyTable.register(UINib(nibName: "LazyCell", bundle: nil), forCellReuseIdentifier: "LazyCell")
-        Send("http://127.0.0.1:8080/api")
+        Send("http://127.0.0.1:8080/api/bears")
         Get("http://127.0.0.1:8080/api/bears")
     }
 
@@ -70,7 +69,7 @@ class LazyLoadingController: UIViewController, UITableViewDelegate, UITableViewD
                     print("Response: \(json)")
                 } else {
                     let jsonStr = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
-                    print("Error could not parse JSON: \(jsonStr)")
+                    print("Error could parse JSON: \(jsonStr)")
                 }
             } catch let parseError {
                 print(parseError)
@@ -113,9 +112,9 @@ class LazyLoadingController: UIViewController, UITableViewDelegate, UITableViewD
         if let countries_list = json as? NSArray {
             for i in 0 ..< data_list.count {
                 if let country_obj = countries_list[i] as? NSDictionary {
-                if let country_name = country_obj["name"] as? String {
-                    if let country_code = country_obj["password"] as? String {
-                        tableData.append("Name: " + country_name + "Password: " + country_code)
+                if let name = country_obj["name"] as? String {
+                    if (country_obj["password"] as? String) != nil {
+                        tableData.append("Name: " + name)
                         }
                     }
                 }

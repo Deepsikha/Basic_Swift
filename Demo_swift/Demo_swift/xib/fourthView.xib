@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="fourthViewController" customModule="Demo_swift" customModuleProvider="target">
             <connections>
+                <outlet property="search" destination="J0f-9c-LCl" id="zpR-dZ-sL7"/>
                 <outlet property="tableView1" destination="hwu-RG-eU2" id="WYt-HU-ktj"/>
                 <outlet property="view" destination="iN0-l3-epB" id="7Ng-5z-YWH"/>
             </connections>
@@ -21,7 +22,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hwu-RG-eU2">
-                    <rect key="frame" x="16" y="82" width="388" height="576"/>
+                    <rect key="frame" x="16" y="98" width="388" height="560"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
@@ -45,6 +46,14 @@
                         <action selector="Logout:" destination="-1" eventType="touchUpInside" id="IcA-FB-CSE"/>
                     </connections>
                 </button>
+                <searchBar contentMode="redraw" fixedFrame="YES" text="" translatesAutoresizingMaskIntoConstraints="NO" id="J0f-9c-LCl">
+                    <rect key="frame" x="3" y="54" width="414" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="vHQ-eP-ihD"/>
+                    </connections>
+                </searchBar>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <point key="canvasLocation" x="33" y="100"/>
